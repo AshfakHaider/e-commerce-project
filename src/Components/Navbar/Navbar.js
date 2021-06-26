@@ -7,19 +7,7 @@ import { faMapMarkerAlt, faQuestionCircle, faSearch, faSortDown } from "@fortawe
 
 
 const Navbar = () => {
-    // const [show,handleShow] = useState(false)
-    // const transitionNavBar = () =>{
-    //     if(window.scrollY > 100){
-    //         handleShow(true);
-    //     }
-    //     else{
-    //         handleShow(false)
-    //     }
-    // }
-    // useEffect(()=>{
-    //     window.addEventListener('scroll',transitionNavBar);
-    //     return () => window.removeEventListener('scroll',transitionNavBar)
-    // },[])
+   
     return (
         <nav id="navbar" className=  'active'>
             <div>
