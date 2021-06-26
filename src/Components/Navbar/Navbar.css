@@ -1,0 +1,49 @@
+.nav-logo{
+    width: 90px;
+    margin-left:  4rem;
+    height: auto;
+    cursor: pointer;
+}
+.active{
+    background-color: #FDD670;
+}
+.navbar-icon{
+    font-size: 23px;
+    margin-top: 15px;
+    color: #615E58;
+}
+.search-icon{
+    position: relative;
+    right: 31px;
+}
+.nav-text{
+    font-size: 17px;
+    color: #615E58;
+    margin-top: 14px;
+    font-weight: 400;
+}
+.arrow-icon{
+    font-size: 18px;
+    margin-top: 14px;
+    color: #615E58;
+    margin-right: 5px;
+}
+.navbar-item{
+    padding: 0px 10px;
+    border-left: 1px solid #e4e3e394;
+    border-right: 1px solid #e4e3e394;
+}
+.signInBtn{
+    border: 1px solid #E04F54;
+    background-color: #E04F54;
+    padding: 0px 27px;
+    color: white;
+    font-weight: 700;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  
