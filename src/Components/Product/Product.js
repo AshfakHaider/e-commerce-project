@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import Sidebar from '../Sidebar/Sidebar';
 import './Product.css'
 import ProductDetails from './ProductDetails';
 
@@ -25,7 +26,9 @@ const Product = () => {
         //         </div>
         //     </div>
         // </div>
-        <div className="d-flex justify-content-center ">
+       
+        <div className="d-flex justify-content-center pd">
+           <Sidebar/>
             <div className="w-75 row">
                 {
                     product.map(pd=><ProductDetails key={pd.id} product={pd}/>)

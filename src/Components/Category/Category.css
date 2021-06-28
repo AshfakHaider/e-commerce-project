@@ -1,12 +1,7 @@
 .category{
-    margin: 50px 0;
+  margin: 50px 0px;
 }
-.categoryBoxes{
-    display: flex;
-    margin: auto;
-    justify-content: center;
-    text-align: center;
-}
+
 @media (min-width: 481px) and (max-width: 767px) {
     .categoryBoxes{
         display: block;
