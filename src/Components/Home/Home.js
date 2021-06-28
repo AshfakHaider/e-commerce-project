@@ -6,6 +6,7 @@ import HeaderContent from '../HeaderContent/HeaderContent';
 import Category from '../Category/Category';
 import Tutorial from '../Tutorial/Tutorial';
 import Testimonial from '../Testimonial/Testimonial';
+import Product from '../Product/Product';
 
 const Home = () => {
     return (
@@ -14,8 +15,10 @@ const Home = () => {
          <Header/>
          <HeaderContent/>
          <Category/>
+         <Product/>
          <Tutorial/>
          <Testimonial/>
+        
         </div>
     );
 };

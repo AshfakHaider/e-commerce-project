@@ -1,0 +1,28 @@
+.pdImg{
+    height: 240px;
+    padding: 5px;
+    position: relative;
+    text-align: center;
+    -webkit-box-align: center;
+}
+.pdImg img{
+    max-width: 100%;
+    max-height: 100%;
+    display: inline-block;
+}
+
+.pdCard{
+    background-color: rgb(255,255,255);
+    position: relative;
+    font-family: inherit;
+    border-radius: 6px;
+    cursor: pointer;
+
+}
+.pd-price{
+    margin-top: 15px;
+    color: #009E7F;
+}
+.pd-info{
+    padding: 20px 25px 30px;
+}
