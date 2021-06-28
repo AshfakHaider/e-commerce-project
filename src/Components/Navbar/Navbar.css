@@ -59,9 +59,16 @@
 .signInBtn{
     border: 1px solid #E04F54;
     background-color: #E04F54;
-    padding: 0px 33px;
+    padding: 0px 29px;
     color: white;
     font-weight: 700;
+}
+.sticky{
+    position: fixed;
+    top: 0px;
+    z-index: 1001;
+    transform: translate3d(0px, 0px, 0px);
+    width: 1349px;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -90,7 +97,7 @@
   
     .logo{
         position: relative;
-        left: 100px;
+        left: 150px;
     }
     .nav-item{
         margin: auto;

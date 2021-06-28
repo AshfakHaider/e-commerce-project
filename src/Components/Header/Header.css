@@ -1,0 +1,41 @@
+.header{
+    background: url('../../images/landingBannerTop.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 300px;
+}
+.header-content{
+    padding: 70px 0px;
+}
+.header-content h1{
+    font-size: 45px;
+    font-weight: 600;
+    margin: 15px 0px;
+}
+.header-icon{
+    position: relative;
+    right: 40px;
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  
+    .header-content{
+        padding: 80px 0px;
+    }
+    .header-content h1{
+        font-size: 25px;
+    }
+    
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  
+    .header-content{
+        padding: 80px 0px;
+    }
+    .header-content h1{
+        font-size: 25px;
+    }
+    
+  }
+  
+  

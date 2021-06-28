@@ -1,0 +1,25 @@
+.category{
+    margin: 50px 0;
+}
+.categoryBoxes{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+}
+@media (min-width: 481px) and (max-width: 767px) {
+    .categoryBoxes{
+        display: block;
+    }
+}
+  
+   
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    
+    /* CSS */
+    .categoryBoxes{
+        display: block;
+    }
+  }
+  
