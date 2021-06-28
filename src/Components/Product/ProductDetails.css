@@ -4,6 +4,7 @@
     position: relative;
     text-align: center;
     -webkit-box-align: center;
+
 }
 .pdImg img{
     max-width: 100%;
@@ -15,14 +16,34 @@
     background-color: rgb(255,255,255);
     position: relative;
     font-family: inherit;
-    border-radius: 6px;
+    margin: 10px 0px;
     cursor: pointer;
-
+    border: 1px solid #dadada;
+    border-radius: 6px;
 }
 .pd-price{
-    margin-top: 15px;
+    position: relative;
+    top:25px;
     color: #009E7F;
 }
 .pd-info{
-    padding: 20px 25px 30px;
+    padding: 9px 13px 35px;
 }
+.pd-info span{
+    color: gray;
+}
+.cartBtn{
+    border: 1px solid white;
+    padding: 5px 10px;
+    background: white;
+    position: relative;
+    bottom: 7px;
+    color: #009E7F;
+}
+.cartBtn:hover{
+    border: 1px solid #009E7F;
+    background: #009E7F;
+    border-radius: 30px;
+    color: white;
+}
+
