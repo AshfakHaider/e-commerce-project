@@ -1,0 +1,21 @@
+.categoryImg{
+    width: 350px;
+    height: 350px;
+    overflow: hidden;
+}
+.categoryBox{
+    margin: 0px 20px;
+}
+.categoryBox h4{
+    margin: 10px 0px;
+}
+.shopBtn{
+    padding: 5px 25px;
+    border: 1px solid black;
+    background: black;
+    margin: 10px 0px;
+    color: white;
+}
+.box-info{
+    margin: 10px 50px;
+}

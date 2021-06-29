@@ -1,49 +1,119 @@
-.nav-logo{
-    width: 90px;
-    margin-left:  4rem;
-    height: auto;
-    cursor: pointer;
+.logoImg{
+  width: 80px;
 }
-.active{
-    background-color: #FDD670;
+.navbar-toggler-icon{
+    color: black;
+}
+.icon{
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 5px;
+    color: black;
+    font-size: 20px;
+}
+
+.navbar-toggler-icon{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    color: black;
+    background-color: black;  
 }
 .navbar-icon{
     font-size: 23px;
-    margin-top: 15px;
+    margin-top: 7px;
     color: #615E58;
 }
 .search-icon{
     position: relative;
-    right: 31px;
+    right: 47px;
+    bottom: 4px;
+}
+.navbar{
+    background-color: #FDD670;
+    margin: 0px;
+    padding: 0px;
+}
+.input{
+    position:relative;
+    bottom: 4px;
+}
+.arrow-icon{
+    font-size: 18px;
+    margin-top: 7px;
+    color: #615E58;
+    margin-right: 5px;
+    cursor: pointer;
 }
 .nav-text{
     font-size: 17px;
     color: #615E58;
-    margin-top: 14px;
+    margin-top: 7px;
     font-weight: 400;
 }
-.arrow-icon{
-    font-size: 18px;
-    margin-top: 14px;
-    color: #615E58;
-    margin-right: 5px;
-}
-.navbar-item{
+.nav-item{
+    margin: 0px 5px;    
     padding: 0px 10px;
     border-left: 1px solid #e4e3e394;
     border-right: 1px solid #e4e3e394;
+
 }
 .signInBtn{
     border: 1px solid #E04F54;
     background-color: #E04F54;
-    padding: 0px 27px;
+    padding: 0px 29px;
     color: white;
     font-weight: 700;
 }
-.sticky {
+.sticky{
     position: fixed;
-    top: 0;
-    width: 100%;
-  }
+    top: 0px;
+    z-index: 1001;
+    transform: translate3d(0px, 0px, 0px);
+    width: 1349px;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
   
+    .logo{
+        position: relative;
+        left: 100px;
+    }
+    .nav-item{
+        margin: auto;
+    }
+    .navBtn{
+        margin: auto;
+    }
+    .input{
+        position: relative;
+        right: 30px;
+    }
+    .navbar-nav{
+        position: relative;
+        bottom: 20px;
+    }
+  }
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+    .logo{
+        position: relative;
+        left: 150px;
+    }
+    .nav-item{
+        margin: auto;
+    }
+    .navBtn{
+        margin: auto;
+    }
+    .input{
+        position: relative;
+        right: 30px;
+    }
+    .navbar-nav{
+        position: relative;
+        bottom: 20px;
+    }
+
+    
+  }
   

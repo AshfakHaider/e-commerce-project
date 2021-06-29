@@ -1,0 +1,24 @@
+.pro-sidebar > .pro-sidebar-inner{
+    background: white;
+    color: black;
+    height: 100%;
+    position: relative;
+    z-index: 1009;
+}
+.pro-sidebar .pro-menu > ul > .pro-sub-menu > .pro-inner-list-item{
+    background: white;
+    color: black;
+}
+.pro-sidebar .pro-menu .pro-menu-item > .pro-inner-item:hover{
+    color: black;
+}
+.pro-sidebar .pro-menu.shaped .pro-menu-item > .pro-inner-item > .pro-icon-wrapper{
+    background: none;
+    color: black;
+}
+.pro-sidebar .pro-menu .pro-menu-item > .pro-inner-item:focus{
+    color: black;
+}
+.sidebar{
+    margin: 70px 0px;
+}

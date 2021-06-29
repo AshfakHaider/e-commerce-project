@@ -1,0 +1,20 @@
+.category{
+  margin: 50px 0px;
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .categoryBoxes{
+        display: block;
+    }
+}
+  
+   
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    
+    /* CSS */
+    .categoryBoxes{
+        display: block;
+    }
+  }
+  
