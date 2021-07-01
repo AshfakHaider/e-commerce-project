@@ -43,7 +43,7 @@ const Review = () => {
   }
   
   return (
-    <article className='review'>
+    <article className='review font'>
       <div className="img-container">
         <img src={image} alt={name} className='person-img' />
         <span className="quote-icon">

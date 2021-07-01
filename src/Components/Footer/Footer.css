@@ -1,0 +1,17 @@
+.app-icon-footer{
+    width: 180px;
+    height: 60px;
+    position: relative;
+    top: 25px;
+}
+.footer-des h5{
+    margin: 10px 0px;
+}
+.footer-des p{
+    margin: 0px;
+    padding: 0px;
+    color: gray;
+}
+.footer{
+    background-color: #F7F7F7;
+}

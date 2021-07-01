@@ -7,7 +7,7 @@ import './Category.css'
 const Category = () => {
     const [categories, setCategories] = useState([]);
     useEffect(() => {
-        fetch('https://mocki.io/v1/ceb3fedb-4945-4b47-a916-1cfdd34bcbaf')
+        fetch('https://mocki.io/v1/33c996d0-8a43-4371-8687-82ec45c52dcb')
             .then(res => res.json())
             .then(data => {
                 console.log(data)
@@ -36,3 +36,14 @@ const Category = () => {
 
 
 export default Category;
+
+
+
+
+
+
+
+  
+ 
+  
+

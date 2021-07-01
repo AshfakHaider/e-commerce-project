@@ -4,12 +4,28 @@
     position: relative;
     text-align: center;
     -webkit-box-align: center;
+    position: relative;
 
+}
+.pdImg::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    transform: translateX(-100%);
+    transition: all 0.4s ease;
+    visibility: hidden;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: #424746a6;
 }
 .pdImg img{
     max-width: 100%;
-    max-height: 100%;
+    max-height:100%;
     display: inline-block;
+    z-index: 10;
+    transition: 0.9s;
 }
 
 .pdCard{
@@ -20,7 +36,55 @@
     cursor: pointer;
     border: 1px solid #dadada;
     border-radius: 6px;
+    overflow: hidden;
+    transition: all 0.3s ease;
 }
+.pdCard:hover .pdImg::before{
+    visibility: visible;
+    transform: translateY(0%);
+}
+
+.pdCard img{
+      transform: scale(1.1);
+}
+.overlay-text{
+    position: absolute  ;
+    z-index: 15;
+    color: #fff;
+    top: 30%;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.pdCard:hover .overlay-text{
+    opacity: 1;
+    visibility: visible;
+}
+.overlay-text h2{
+    transition: all 1s ease;
+    margin: 5px 0 15px;
+    font-size: 30px;
+    position: relative;
+    top: -22px; 
+}
+
+.pdCard:hover h2{
+    top: 0;
+}
+.overlay-text p{
+    position: relative;
+    bottom: -30px;
+    transition: all 1s ease;
+
+}
+.pdCard:hover p{
+    bottom: 0;
+}
+
+
 .pd-price{
     position: relative;
     top:25px;
@@ -47,3 +111,15 @@
     color: white;
 }
 
+@media (min-width: 481px) and (max-width: 767px) {
+   .pd-price{
+       justify-content: space-between;
+   }
+ 
+}
+  @media (min-width: 320px) and (max-width: 480px) {
+    
+    .pd-price{
+        justify-content: space-between;
+    }
+  }

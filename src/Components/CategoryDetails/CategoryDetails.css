@@ -1,7 +1,7 @@
 .categoryImg{
-    width: 350px;
-    height: 350px;
+    width: 250px;
     overflow: hidden;
+    height: 200px;
 }
 .categoryBox{
     margin: 0px 20px;

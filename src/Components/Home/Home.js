@@ -7,10 +7,18 @@ import Category from '../Category/Category';
 import Tutorial from '../Tutorial/Tutorial';
 import Testimonial from '../Testimonial/Testimonial';
 import Product from '../Product/Product';
+import About from '../About/About'
+import Contact from '../Contact/Contact'
+import Sidebar from '../Sidebar/Sidebar'
+import Test from '../Test/Test';
+import FooterTop from '../FooterTop/FooterTop';
+import Footer from '../Footer/Footer';
+import SidebarTest from '../SidebarTest/SidebarTest';
 
 const Home = () => {
     return (
-        <div className="home">
+        <div className="home font">
+            
          <Navbar />
          <Header/>
          <HeaderContent/>
@@ -18,7 +26,10 @@ const Home = () => {
          <Product/>
          <Tutorial/>
          <Testimonial/>
-         
+         <About/>
+         <Contact/>
+         <FooterTop/>
+         <Footer/>
         
         </div>
     );

@@ -3,17 +3,19 @@ import './Navbar.css';
 import logo from '../../images/logo_.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkerAlt, faQuestionCircle, faSearch, faSortDown } from "@fortawesome/free-solid-svg-icons";
-
+import Sidebar from '../Sidebar/Sidebar';
+import SidebarTest from '../SidebarTest/SidebarTest';
 
 
 
 const Navbar = () => {
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
-
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
+  
   return (
       <div className='font '>
-        <nav class="navbar navbar-expand-lg navbar-light ">
+        <nav class="navbar navbar-expand-lg navbar-light  ">
+          <SidebarTest/>
           <a class="navbar-brand logo" href="/">
             <img src={logo} alt="" className='logoImg' />
           </a>
@@ -42,10 +44,7 @@ const Navbar = () => {
               </li>
               <li class="navBtn d-flex">
                 <button className='signInBtn'>Sign In</button>
-
               </li>
-
-
             </ul>
           </div>
         </nav>

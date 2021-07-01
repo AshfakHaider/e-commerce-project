@@ -2,12 +2,14 @@
     background: white;
     color: black;
     height: 100%;
-    position: relative;
     z-index: 1009;
+    position: relative;
+   
 }
 .pro-sidebar .pro-menu > ul > .pro-sub-menu > .pro-inner-list-item{
     background: white;
     color: black;
+   
 }
 .pro-sidebar .pro-menu .pro-menu-item > .pro-inner-item:hover{
     color: black;

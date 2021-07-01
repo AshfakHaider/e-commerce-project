@@ -8,11 +8,13 @@ import {
 import Home from './Components/Home/Home';
 
 
-
 function App() {
   return (
+    
     <Router>
+  
        <Switch>
+
           <Route path ='/home'>
               <Home />
           </Route>
