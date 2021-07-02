@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkerAlt, faQuestionCircle, faSearch, faSortDown } from "@fortawesome/free-solid-svg-icons";
 import Sidebar from '../Sidebar/Sidebar';
 import SidebarTest from '../SidebarTest/SidebarTest';
-
+import { Link } from 'react-router-dom';
 
 
 const Navbar = () => {
@@ -43,7 +43,7 @@ const Navbar = () => {
                 <h2 className='nav-text' style={{ cursor: 'pointer' }}>EN | BN</h2>
               </li>
               <li class="navBtn d-flex">
-                <button className='signInBtn'>Sign In</button>
+                  <Link to ='/login'> <button className='signInBtn'> Sign In</button></Link>
               </li>
             </ul>
           </div>

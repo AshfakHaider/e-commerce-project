@@ -6,6 +6,7 @@ import './Test.css'
 
 const Container = styled.div`
   position: fixed;
+  top:0;
   z-index:1009;
   .active {
     border-right: 4px solid white;

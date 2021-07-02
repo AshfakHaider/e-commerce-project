@@ -18,8 +18,7 @@ import SidebarTest from '../SidebarTest/SidebarTest';
 const Home = () => {
     return (
         <div className="home font">
-            
-         <Navbar />
+        
          <Header/>
          <HeaderContent/>
          <Category/>
