@@ -5,7 +5,7 @@ import './FooterTop.css'
 const FooterTop = () => {
     return (
         <div className="footerTop">
-            <div className="container">
+            <div className="">
                 <div className="row justify-content-lg-between">
                     <div className="col-md-5">
                         <img src={map} alt="" className='w-100' />

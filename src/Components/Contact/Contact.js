@@ -8,7 +8,7 @@ import mobile from '../../images/mobile.png'
 const Contact = () => {
     return (
         <div className="contact font text-center">
-            <div className="container">
+            <div className="">
                 <div className="row d-flex justify-content-center">
                     <div className="col-md-4">
                         <h6>Be a proud part of our community</h6>

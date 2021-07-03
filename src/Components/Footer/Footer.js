@@ -7,7 +7,7 @@ import app from '../../images/app.png';
 const Footer = () => {
     return (
         <div className="footer">
-            <div className="container">
+            <div className="">
                 <div className="row justify-content-sm-between">
                     <div className="col-md-8">
                         <img src={logo} alt="" className='w-25' />

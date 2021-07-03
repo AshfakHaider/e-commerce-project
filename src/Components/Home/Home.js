@@ -27,7 +27,7 @@ const Home = () => {
          <Testimonial/>
          <About/>
          <Contact/>
-         <FooterTop/>
+
          <Footer/>
         
         </div>

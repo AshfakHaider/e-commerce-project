@@ -8,7 +8,7 @@ import './About.css';
 const About = () => {
     return (
         <div className="about text-center">
-            <div className="container">
+            <div className="">
                 <h2>Key Details About Us</h2>
                 <div className="underline mb-5"></div>
                 <div className="row m-auto justify-content-center">
