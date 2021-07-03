@@ -1,4 +1,4 @@
-.pdImg-dashboard{
+.pdImg-dashboard {
     height: 240px;
     padding: 5px;
     position: relative;
@@ -6,16 +6,21 @@
     -webkit-box-align: center;
     position: relative;
 }
-.pdImg-dashboard img{
+
+.pdImg-dashboard img {
     max-width: 100%;
-    max-height:100%;
+    max-height: 100%;
     display: inline-block;
     z-index: 10;
     transition: 0.9s;
-
 }
-.updateBtn{
+
+.updateBtn {
     padding: 5px 10px;
     background-color: white;
-    
+}
+
+.modalDiv button{
+    /* background-color: violet;
+    border-radius: 10px; */
 }

@@ -1,0 +1,9 @@
+.loadMoreBtnDash{
+    padding: 7px 22px;
+    border: 1px solid #009E7F;
+    border-radius: 7px;
+    background-color: #009E7F;
+    position: relative;
+    top: 20px;
+   
+}

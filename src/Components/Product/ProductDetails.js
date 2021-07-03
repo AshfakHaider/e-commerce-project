@@ -11,16 +11,16 @@ const ProductDetails = ({ product }) => {
         history.push(`/product/${pd.name}`);
         
     }
-    const { name, image, quantity, price } = product;
+    const { name, imageUrl, piece, price } = product;
     return (
         <div className='col-md-3 col-sm-6 col-xs-12 justify-content-center'>
             <div className=" pdCard">
                 <div className="pdImg">
-                    <img src={image} alt="" className='w-100' />
+                    <img src={imageUrl} alt="" className='w-100' />
                 </div>
                 <div className="pd-info" onClick={()=>handleProduct(product)}>
                     <h6>{name}</h6>
-                    <span>{quantity} pcs</span>
+                    <span>{piece} pcs</span>
                     <div className="d-flex justify-content-lg-between pd-price">
                         <div className="price">
                             <h6>{price}</h6>

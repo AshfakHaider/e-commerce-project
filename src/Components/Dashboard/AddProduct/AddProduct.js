@@ -27,7 +27,7 @@ const AddProduct = () => {
             imageUrl: imgUrl
         }
         console.log(eventData);
-        const url = `http://localhost:5000/addProduct`
+        const url = `https://eco-shop-db.herokuapp.com/addProduct`
         fetch(url, {
             method: 'POST',
             headers: {

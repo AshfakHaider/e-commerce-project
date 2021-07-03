@@ -1,3 +1,11 @@
 .pd{
     margin: 70px 0px;
 }
+.loadMoreBtn{
+    padding: 7px 22px;
+    border: 1px solid #009E7F;
+    border-radius: 7px;
+    background-color: #009E7F;
+    position: relative;
+    bottom: 25px;
+}
