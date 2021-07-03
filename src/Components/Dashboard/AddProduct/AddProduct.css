@@ -1,0 +1,15 @@
+.addProduct{
+    margin-top: 30px;
+}
+.label{
+    text-align: left;
+    font-size: 18px;
+    font-weight: 400;
+}
+.form h6{
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+form{
+    margin: 25px 0px;
+}

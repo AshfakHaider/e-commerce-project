@@ -11,7 +11,8 @@ import { createContext } from 'react';
 import { useState } from 'react';
 import Navbar from './Components/Navbar/Navbar';
 import SingleProduct from './Components/Product/SingleProduct/SingleProduct.js';
-
+import AddProduct  from './Components/Dashboard/AddProduct/AddProduct';
+import AllProduct from './Components/Dashboard/AllProducts/AllProduct';
 export const UserContext = createContext();
 
 
@@ -33,6 +34,12 @@ function App() {
           </Route>
           <Route path ='/login'>
             <Login/>
+          </Route>
+          <Route path='/allProducts'>
+            <AllProduct/>
+          </Route>
+          <Route path ='/addProduct'>
+            <AddProduct/>
           </Route>
           <Route path = '/product/:pd'>
             <SingleProduct />
