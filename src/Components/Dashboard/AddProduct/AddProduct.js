@@ -82,7 +82,7 @@ const AddProduct = () => {
                         <h6 className='label'>Enter Product Category</h6>
                         <input type='text' name='piece' placeholder='Category' id='category' className='form-control' />
                         <br />
-                        <h6 className='label'>Enter Product Price</h6>
+                        <h6 className='label'>Enter Product Picture</h6>
                         <input type="file" onChange={handleImgUpload} className='form-control'/>
 
                         {errors.exampleRequired && <span>This field is required</span>}
