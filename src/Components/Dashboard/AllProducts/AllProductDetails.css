@@ -20,7 +20,43 @@
     background-color: white;
 }
 
-.modalDiv button{
-    /* background-color: violet;
-    border-radius: 10px; */
+.modal-section{
+    width: 500px;
 }
+.modal-icon{
+    width: 50px;
+    color: red;
+    text-align: right;
+    cursor: pointer;
+}
+.modalIconDiv{
+    text-align: right;
+}
+.label-modal{
+    text-align: left;
+    color: white;
+    margin:0 ;
+    padding: 0;
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  
+    /* CSS */
+    .modal-section{
+        width: 350px;
+    }
+    
+  }
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    .modal-section{
+        width: 300px;
+    }
+    
+    
+  }
+  

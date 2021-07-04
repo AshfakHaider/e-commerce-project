@@ -28,7 +28,7 @@ const AllProduct = () => {
 
                 <div className="w-75 row">
                     {
-                        products.slice(0,visible).map(product => <AllProductDetails product={product} />)
+                        products.slice(0,visible).map(product => <AllProductDetails key={product._id} product={product} />)
                     }
                 </div>
 
