@@ -26,8 +26,8 @@ const AddProduct = () => {
             brand:brand,
             imageUrl: imgUrl
         }
-        console.log(eventData);
-        const url = `https://eco-shop-db.herokuapp.com/addProduct`
+        //console.log(eventData);
+        const url = `https://eco-shop-db.herokuapp.com/addProduct`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -58,7 +58,7 @@ const AddProduct = () => {
 
     return (
         <div className="addProduct font">
-            <div className="container">
+            <div className="container-fluid">
                 <h2 className='text-center'>Add Product On Database</h2>
                 <div className="m-auto col-md-7 text-center ">
                     <form onSubmit={handleSubmit(onSubmit)} >
@@ -82,7 +82,7 @@ const AddProduct = () => {
 
                         {errors.exampleRequired && <span>This field is required</span>}
                         <br />
-                        <button type='submit' className='shopBtn' onClick={refreshPage}>Submit</button>
+                        <button type='submit' className='shopBtn'>Submit</button>
                     </form>
                 </div>
             </div>

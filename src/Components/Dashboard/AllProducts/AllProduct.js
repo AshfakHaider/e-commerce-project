@@ -8,7 +8,7 @@ import './AllProducts.css'
 
 const AllProduct = () => {
     const [products, setProducts] = useState([]);
-    const [visible, setVisible] = useState(16)
+    const [visible, setVisible] = useState(55)
     useEffect(() => {
         fetch('https://eco-shop-db.herokuapp.com/products')
             .then(res => res.json())

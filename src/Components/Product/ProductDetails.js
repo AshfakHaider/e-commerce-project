@@ -23,7 +23,7 @@ const ProductDetails = ({ product }) => {
                     <span>{piece} pcs</span>
                     <div className="d-flex justify-content-lg-between pd-price">
                         <div className="price">
-                            <h6>{price}</h6>
+                            <h6>{price} Tk</h6>
                         </div>
                         <div className="cart d-flex">
                             <button className='cartBtn'> <FontAwesomeIcon icon={faShoppingCart} className='cartIcon' /> Cart</button>

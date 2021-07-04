@@ -13,9 +13,12 @@ const Navbar = () => {
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
   
   return (
-      <div className='font '>
-        <nav class="navbar navbar-expand-lg navbar-light  ">
-          <SidebarTest/>
+      <div className='font justify-content-center'>
+
+        {/* <Sidebar/> */}
+        
+        <nav class="navbar navbar-expand-lg navbar-light   ">
+          {/* <SidebarTest/> */}
           <a class="navbar-brand logo" href="/">
             <img src={logo} alt="" className='logoImg' />
           </a>

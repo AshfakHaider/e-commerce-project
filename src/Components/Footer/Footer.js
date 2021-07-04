@@ -6,20 +6,20 @@ import app from '../../images/app.png';
 
 const Footer = () => {
     return (
-        <div className="footer">
-            <div className="container">
-                <div className="d-flex justify-content-sm-between">
-                    <div className="col-md-8">
+        <div className="footer d-flex justify-content-center">
+            <div className="container-fluid">
+                <div className="d-flex justify-content-between">
+                    <div className="col-md-7">
                         <img src={logo} alt="" className='w-25' />
                         <p>Chaldal.com is an online shop available in Dhaka, Narayanganj, Chattogram and Jashore. We believe time is valuable to our fellow residents, and that they should not have to waste hours in traffic, brave bad weather and wait in line just to buy basic necessities like eggs! This is why Chaldal delivers everything you need right at your door-step and at no additional cost.</p>
                     </div>
-                    <div className="col-md-3 d-flex justify-content-center">
+                    <div className="col-md-5 d-inline-block text-right">
                         <img src={google} alt="" className='app-icon-footer' />
                         <img src={app} alt="" className='app-icon-footer' />
                     </div>
                 </div>
-                <div className="row footer-des">
-                    <div className="col-md-3 justify-content-center">
+                <div className="footer-des d-lg-flex">
+                    <div className="col-md-3 justify-content-center ">
                         <h5>Customer Service</h5>
                         <p>Contact Us</p>
                         <p>FAQ</p>

@@ -66,7 +66,7 @@ const AllProductDetails = ({ product }) => {
             </div>
             <div className="upDelBtn d-flex justify-content-between" >
                 <button className='btn btn-warning me-2' onClick={openModal}>Update </button>
-                <div onClick={refreshPage}>
+                <div>
                 <button className='btn btn-danger ms-2' onClick={() => deleteProduct(_id)}>Delete </button>
                 </div>
             </div>
