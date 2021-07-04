@@ -35,7 +35,11 @@ const AddProduct = () => {
             },
             body: JSON.stringify(eventData)
         })
-            .then(res => console.log('server side response', res));
+            .then(res => {
+                console.log('server side response', res)
+                refreshPage();
+               
+            });
     };
 
     const handleImgUpload = event => {
@@ -46,15 +50,16 @@ const AddProduct = () => {
         axios.post('https://api.imgbb.com/1/upload', imageData)
             .then(function (response) {
                 setImgUrl(response.data.data.display_url)
+               
             })
             .catch(function (error) {
                 console.log(error)
             })
     }
-    function refreshPage(){
+
+    const refreshPage = () =>{
         window.location.reload();
-    } 
-    
+    }
 
     return (
         <div className="addProduct font">
@@ -82,7 +87,9 @@ const AddProduct = () => {
 
                         {errors.exampleRequired && <span>This field is required</span>}
                         <br />
-                        <button type='submit' className='shopBtn'>Submit</button>
+                        <div>
+                            <button type='submit' className='shopBtn'>Submit</button>
+                        </div>
                     </form>
                 </div>
             </div>

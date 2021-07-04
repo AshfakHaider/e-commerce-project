@@ -26,9 +26,13 @@ const AllProductDetails = ({ product }) => {
             .then(res => res.json())
             .then(data => {
                 console.log('deleted successfully');
+                refreshPage();
             })
     }
-    function refreshPage() {
+    // function refreshPage() {
+    //     window.location.reload();
+    // }
+    const refreshPage = () =>{
         window.location.reload();
     }
     const [modalIsOpen, setIsOpen] = React.useState(false);
