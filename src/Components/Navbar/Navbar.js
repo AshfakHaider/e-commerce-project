@@ -3,17 +3,22 @@ import './Navbar.css';
 import logo from '../../images/logo_.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkerAlt, faQuestionCircle, faSearch, faSortDown } from "@fortawesome/free-solid-svg-icons";
-
-
+import Sidebar from '../Sidebar/Sidebar';
+import SidebarTest from '../SidebarTest/SidebarTest';
+import { Link } from 'react-router-dom';
 
 
 const Navbar = () => {
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
-
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
+  
   return (
-      <div className='font '>
-        <nav class="navbar navbar-expand-lg navbar-light ">
+      <div className='font justify-content-center'>
+
+        {/* <Sidebar/> */}
+        
+        <nav class="navbar navbar-expand-lg navbar-light   ">
+          {/* <SidebarTest/> */}
           <a class="navbar-brand logo" href="/">
             <img src={logo} alt="" className='logoImg' />
           </a>
@@ -41,11 +46,8 @@ const Navbar = () => {
                 <h2 className='nav-text' style={{ cursor: 'pointer' }}>EN | BN</h2>
               </li>
               <li class="navBtn d-flex">
-                <button className='signInBtn'>Sign In</button>
-
+                  <Link to ='/login'> <button className='signInBtn'> Sign In</button></Link>
               </li>
-
-
             </ul>
           </div>
         </nav>

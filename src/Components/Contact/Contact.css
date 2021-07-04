@@ -1,0 +1,44 @@
+.app-icon{
+    width: 180px;
+}
+.contact{
+    margin: 70px 0px;
+}
+.contact h6{
+    margin-bottom: 70px;
+    font-size: 26px;
+}
+.form-btn{
+    padding: 6px 14px;
+    background-color: tomato;
+    border: 1px solid tomato;
+}
+.form-img{
+    position:absolute;
+    cursor: pointer;
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  
+    .form-img{
+        position: initial;
+        margin-top: 40px;
+    }
+    
+  }
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    
+    /* CSS */
+    .form-img{
+        position: inherit;
+        margin-top: 40px;
+    }
+    
+    
+  }
+  

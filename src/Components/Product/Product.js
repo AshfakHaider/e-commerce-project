@@ -6,16 +6,20 @@ import './Product.css'
 import ProductDetails from './ProductDetails';
 
 const Product = () => {
-    const [product,setProduct] = useState([]);
-    
-    useEffect(()=>{
-        fetch('https://mocki.io/v1/43332677-62e0-4a3c-a797-08b1f1934d12')
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
-            setProduct(data)
-        })
-    },[])
+    const [product, setProduct] = useState([]);
+    const [visible, setVisible] = useState(12);
+
+    useEffect(() => {
+        fetch('https://eco-shop-db.herokuapp.com/products')
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                setProduct(data)
+            })
+    }, [])
+    const loadMore = () => {
+        setVisible((prevValue) => prevValue + 8);
+    }
     return (
         // <div className='product'>
         //     <div className="">
@@ -26,15 +30,23 @@ const Product = () => {
         //         </div>
         //     </div>
         // </div>
-       
-        <div className="d-flex justify-content-center pd">
-           <Sidebar/>
-            <div className="w-75 row">
-                {
-                    product.map(pd=><ProductDetails key={pd.id} product={pd}/>)
-                }
+
+        <div className="productDiv">
+            <div className="d-flex justify-content-center pd">
+                <Sidebar />
+                <div className="w-75 row">
+                    {
+                        product.slice(0, visible).map(pd => <ProductDetails key={pd.id} product={pd} />)
+                    }
+
+                </div>
+
+            </div>
+            <div className="text-center">
+                <button className='loadMoreBtn' onClick={loadMore}>Load More</button>
             </div>
         </div>
+
 
     );
 };

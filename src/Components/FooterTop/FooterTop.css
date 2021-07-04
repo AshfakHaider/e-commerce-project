@@ -1,0 +1,17 @@
+.footerTop-title{
+    font-size: 45px;
+    color: red;
+    margin-top: 15px;
+}
+.footerTop{
+    background-color: gray;
+    padding: 30px 0px;
+    margin-top: 70px;
+}
+.footerTop h3{
+    color: white;
+     
+}
+.desc{
+    margin-top: 80px;
+}

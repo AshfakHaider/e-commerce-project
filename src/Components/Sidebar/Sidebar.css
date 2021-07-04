@@ -1,13 +1,15 @@
 .pro-sidebar > .pro-sidebar-inner{
-    background: white;
+    background: none;
     color: black;
     height: 100%;
-    position: relative;
     z-index: 1009;
+    display: flex;
+    justify-content: center;
 }
 .pro-sidebar .pro-menu > ul > .pro-sub-menu > .pro-inner-list-item{
     background: white;
     color: black;
+   
 }
 .pro-sidebar .pro-menu .pro-menu-item > .pro-inner-item:hover{
     color: black;
@@ -21,4 +23,11 @@
 }
 .sidebar{
     margin: 70px 0px;
+}
+/* .pro-sidebar{
+    width: 200px;
+    min-width: 200px;
+} */
+.pro-sidebar .pro-menu .pro-menu-item > .pro-inner-item{
+    padding: 8px 43px 8px 15px;
 }

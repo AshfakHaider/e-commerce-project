@@ -10,47 +10,28 @@ import {
 } from "react-pro-sidebar";
 
 import 'react-pro-sidebar/dist/css/styles.css';
-import { FaAppleAlt, FaStar, FaSun, FaFish, FaBaby, FaHome, FaTachometerAlt, FaCar } from 'react-icons/fa';
-//import { FaList, FaRegHeart } from "react-icons/fa";
+import { FaAppleAlt, FaStar, FaSun, FaFish, FaBaby, FaHome, FaTachometerAlt, FaCar ,FaBars} from 'react-icons/fa';
 import { FiHome, FiArrowLeftCircle, FiArrowRightCircle } from "react-icons/fi";
-//import { RiPencilLine } from "react-icons/ri";
-//import { BiCog } from "react-icons/bi";
-import { useMediaQuery } from 'react-responsive'
 import './Sidebar.css'
-import MediaQuery from 'react-responsive'
-import { set } from 'react-hook-form';
 
 
 
-const Sidebar = () => {
-    const [menuCollapse, setMenuCollapse] = useState(true);
+
+
+
+const Sidebar = ({ collapsed, toggled, handleToggleSidebar }) => {
+   
+    
+  
+    const [menuCollapse, setMenuCollapse] = useState(false);
     const menuIconClick = () => {
 
         //menuCollapse ? setMenuCollapse(false) : setMenuCollapse(true);
         setMenuCollapse(!menuCollapse)
+        
 
     };
-    const isMobileDevice = useMediaQuery({
-        query: "(min-device-width: 480px)",
-    });
 
-    const isTabletDevice = useMediaQuery({
-        query: "(min-device-width: 768px)",
-    });
-
-    const isLaptop = useMediaQuery({
-        query: "(min-device-width: 1024px)",
-    });
-
-    const isDesktop = useMediaQuery({
-        query: "(min-device-width: 1200px)",
-    });
-    
-    const responsive = () =>{
-        if(isMobileDevice){
-            setMenuCollapse(true)
-        }
-    }
 
   
 
@@ -59,19 +40,25 @@ const Sidebar = () => {
             <div id="sidebar">
 
                 {/* collapsed props to change menu size using menucollapse state */}
-                <ProSidebar collapsed={menuCollapse}>
+                <ProSidebar 
+                collapsed={menuCollapse}
+                 breakPoint="md"
+              
+               
+                >
                     <SidebarHeader>
-                        <div className="logotext">
+                        {/* <div className="logotext"> */}
                             {/* small and big change using menucollapse state */}
-                            <p>{menuCollapse ? "Logo" : "Big Logo"}</p>
-                        </div>
-                        <div className="closemenu" onClick={menuIconClick}>
+                            {/* <p>{menuCollapse ? "Logo" : "Big Logo"}</p>
+                        </div> */}
+                        <div className="closemenu" >
                             {/* changing menu collapse icon on click */}
-                            {menuCollapse ? (
+                            {/* {menuCollapse ? (
                                 <FiArrowRightCircle />
                             ) : (
                                 <FiArrowLeftCircle />
-                            )}
+                            )} */}
+                            <FaBars style={{cursor:'pointer'}} onClick={menuIconClick} />
                         </div>
                     </SidebarHeader>
                     <SidebarContent>
