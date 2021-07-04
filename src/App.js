@@ -42,7 +42,7 @@ function App() {
           <Route path ='/addProduct'>
             <AddProduct/>
           </Route>
-          <Route path = '/product/:pd'>
+          <Route path = '/product/:id'>
             <SingleProduct />
           </Route>
           <Route exact path ='/'>

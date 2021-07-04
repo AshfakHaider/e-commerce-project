@@ -117,7 +117,7 @@ const AllProductDetails = ({ product }) => {
     }
 
     return (
-        <div className="col-md-3 col-sm-6 col-xs-12">
+        <div className="col-md-4 col-sm-6 col-xs-12 mt-4 mb-4">
             <div className="pdCard">
                 <div className="pdImg-dashboard">
                     <img src={imageUrl} alt="" />

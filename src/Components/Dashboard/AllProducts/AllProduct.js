@@ -21,7 +21,7 @@ const AllProduct = () => {
         setVisible((prevValue) => prevValue + 8);
     }
     return (
-        <div className="allPdDiv font mt-4 mb-5">
+        <div className="font mt-4 mb-5 container-fluid">
             <h4 className='text-center'>Here's all of the products</h4>
             <div className="underline mb-4 mt-2"></div>
             <div className="allProducts d-flex justify-content-center ">

@@ -8,6 +8,7 @@ import ProductDetails from './ProductDetails';
 const Product = () => {
     const [product, setProduct] = useState([]);
     const [visible, setVisible] = useState(12);
+   
 
     useEffect(() => {
         fetch('https://eco-shop-db.herokuapp.com/products')
@@ -20,6 +21,7 @@ const Product = () => {
     const loadMore = () => {
         setVisible((prevValue) => prevValue + 8);
     }
+  
     return (
         // <div className='product'>
         //     <div className="">
