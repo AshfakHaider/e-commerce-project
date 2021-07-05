@@ -50,3 +50,30 @@ transition: 0.9s;
 .minus{
     cursor: pointer;
 }
+.sp{
+    display: flex;
+    justify-content: center;
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  
+    /* CSS */
+    .sp{
+        display: block;
+    }
+    
+  }
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    
+    /* CSS */
+    .sp{
+        display: block;
+    }
+    
+  }
+  

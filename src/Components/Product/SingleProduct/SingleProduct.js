@@ -33,7 +33,7 @@ const SingleProduct = () => {
     return (
         <div className='single-product container-fluid font'>
             <div className="">
-                <div className="d-flex justify-content-center">
+                <div className="sp">
                     <div className="col-md-5 singlePdImg">
                         <img src={productLoad.imageUrl} alt="" />
                     </div>
