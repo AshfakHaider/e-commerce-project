@@ -1,3 +1,52 @@
 .product-info{
     margin-top: 50px;
 }
+.singlePdImg img{
+    
+max-width: 100%;
+max-height:100%;
+display: inline-block;
+z-index: 10;
+transition: 0.9s;
+}
+.singlePdImg{
+    height: 400px;
+    padding: 5px;
+    position: relative;
+    text-align: center;
+    -webkit-box-align: center;
+    position: relative;
+    border: 1px solid #80808078;
+    border-radius: 6px;
+    background:rgb(255,255,255)
+}
+.single-product{
+    margin: 70px 0px;
+}
+.single-product-info{
+    margin-top: 40px;
+    margin-left: 30px;
+}
+.single-product-info h1{
+    font-size: 35px;
+    font-weight: 500;
+}
+.single-pd-price{
+    color: red;
+    font-size: 22px;
+    font-weight: 500;
+    padding: 10px 15px;
+    background-color: #F5F5F5;
+    border-radius: 7px;
+    border: 1px solid #80808078;
+    margin: 20px 0px;
+}
+.sp-brand {
+    color: #009E7F;
+}
+.plus{
+    cursor: pointer;
+}
+.minus{
+    cursor: pointer;
+}

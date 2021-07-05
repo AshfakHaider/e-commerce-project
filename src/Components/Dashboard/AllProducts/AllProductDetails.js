@@ -98,6 +98,7 @@ const AllProductDetails = ({ product }) => {
         .then(res=>res.json())
         .then(data =>{
             console.log(data,'updated success!!')
+            refreshPage();
         })
     }
     
