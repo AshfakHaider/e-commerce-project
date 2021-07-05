@@ -15,10 +15,10 @@ import FooterTop from '../FooterTop/FooterTop';
 import Footer from '../Footer/Footer';
 import SidebarTest from '../SidebarTest/SidebarTest';
 
+
 const Home = () => {
     return (
         <div className="home font m-auto">
-        
          <Header/>
          <HeaderContent/>
          <Category/>
@@ -27,9 +27,7 @@ const Home = () => {
          <Testimonial/>
          <About/>
          <Contact/>
-
          <Footer/>
-        
         </div>
     );
 };

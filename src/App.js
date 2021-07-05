@@ -11,46 +11,49 @@ import { createContext } from 'react';
 import { useState } from 'react';
 import Navbar from './Components/Navbar/Navbar';
 import SingleProduct from './Components/Product/SingleProduct/SingleProduct.js';
-import AddProduct  from './Components/Dashboard/AddProduct/AddProduct';
+import AddProduct from './Components/Dashboard/AddProduct/AddProduct';
 import AllProduct from './Components/Dashboard/AllProducts/AllProduct';
 import TestHome from './Components/TestHome/TestHome';
+
 export const UserContext = createContext();
 
 
 function App() {
-  const [loggedInUser,setLoggedInUser ] = useState(useState({
+
+  const [loggedInUser, setLoggedInUser] = useState(useState({
     isSignedIn: false,
     name: '',
     email: '',
     img: ''
-}));
+  }));
+  
 
   return (
-    <UserContext.Provider value = {[loggedInUser,setLoggedInUser]}>
-    <Router>
-    <Navbar/>
-       <Switch>
-          <Route path ='/home'>
-              <Home />
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route path='/home'>
+            <Home />
           </Route>
-          <Route path ='/login'>
-            <Login/>
+          <Route path='/login'>
+            <Login />
           </Route>
           <Route path='/allProducts'>
-            <AllProduct/>
+            <AllProduct />
           </Route>
-          <Route path ='/addProduct'>
-            <AddProduct/>
+          <Route path='/addProduct'>
+            <AddProduct />
           </Route>
-          <Route path = '/product/:id'>
+          <Route path='/product/:id'>
             <SingleProduct />
           </Route>
-          <Route exact path ='/'>
-             <Home />
-             {/* <TestHome/> */}
+          <Route exact path='/'>
+            <Home />
+            {/* <TestHome/> */}
           </Route>
-       </Switch>
-    </Router>
+        </Switch>
+      </Router>
     </UserContext.Provider>
   );
 }

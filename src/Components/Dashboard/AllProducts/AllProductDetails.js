@@ -8,6 +8,7 @@ import axios from 'axios';
 
 
 
+
 Modal.setAppElement('#root');
 const customStyles = {
     content: {
@@ -27,11 +28,13 @@ const customStyles = {
 const AllProductDetails = ({ product }) => {
     const [pdLoad,setPdLoad] = useState([]);
     const [imgUrl, setImgUrl] = useState(null);
+  
 
     const { _id, name, imageUrl, price, piece, brand, category } = product;
 
     // deleting product
     const deleteProduct = id => {
+  
         fetch(`https://eco-shop-db.herokuapp.com/deleteProduct/${id}`, {
             method: 'DELETE'
         })
@@ -116,6 +119,7 @@ const AllProductDetails = ({ product }) => {
                 console.log(error)
             })
     }
+
 
     return (
         <div className="col-md-4 col-sm-6 col-xs-12 mt-4 mb-4">

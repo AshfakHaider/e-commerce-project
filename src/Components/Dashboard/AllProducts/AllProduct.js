@@ -3,23 +3,33 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import AllProductDetails from './AllProductDetails';
 import './AllProducts.css'
-
+import Loading from '../../Loading/Loading'
 
 
 const AllProduct = () => {
     const [products, setProducts] = useState([]);
     const [visible, setVisible] = useState(55)
+    const [loading,setLoading]= useState(true);
     useEffect(() => {
+        setLoading(true)
         fetch('https://eco-shop-db.herokuapp.com/products')
             .then(res => res.json())
             .then(data => {
                 console.log(data)
                 setProducts(data);
+                setLoading(false)
             })
     }, [])
     const loadMore = () => {
         setVisible((prevValue) => prevValue + 8);
     }
+    if (loading) {
+        return (
+          <div className='load-all'>
+            <Loading />
+          </div>
+        )
+      }
     return (
         <div className="font mt-4 mb-5 container-fluid">
             <h4 className='text-center'>Here's all of the products</h4>
