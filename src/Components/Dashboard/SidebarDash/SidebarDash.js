@@ -29,10 +29,10 @@ const SidebarDash = () => {
     };
 
     return (
-        <div className='d-flex'>
+        <div className='d-flex '>
             {/* <h3 className='text-center'>Dashboard</h3> */}
             <>
-                <div id="sidebar">
+                <div id="sidebarDash" style={{color:'white'}}>
 
                     {/* collapsed props to change menu size using menucollapse state */}
                     <ProSidebar
@@ -59,15 +59,15 @@ const SidebarDash = () => {
                         <SidebarContent>
                             <Menu iconShape="square">
                                 <MenuItem active={true} icon={<FiHome />}>
-                                    <Link to='/' target="_blank"  className='text-dark'> Home</Link>
+                                    <Link to='/' target="_blank"  > Home</Link>
 
                                 </MenuItem>
                                 <MenuItem icon={<FaStar />}>
-                                    <Link to='/allProducts' target="_blank" className='text-dark'> All Products</Link>
+                                    <Link to='/allProducts' target="_blank" > All Products</Link>
 
                                 </MenuItem>
                                 <MenuItem icon={<FaSun />}>
-                                    <Link to='/addProduct' target="_blank" className='text-dark'> Add Product</Link>
+                                    <Link to='/addProduct' target="_blank" > Add Product</Link>
                                 </MenuItem>
                                 <MenuItem icon={<FaSun />}>Hygine</MenuItem>
                                 <SubMenu title="Fruit & Vagetables" icon={<FaAppleAlt />}>

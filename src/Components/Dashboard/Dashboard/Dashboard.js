@@ -4,6 +4,7 @@ import Sidebar from '../../Sidebar/Sidebar'
 import SidebarDash from '../SidebarDash/SidebarDash';
 import AddProduct from '../AddProduct/AddProduct'
 const Dashboard = () => {
+    
     return (
         <div className='dashboard d-flex'>
             <div className="dashboard-menu">

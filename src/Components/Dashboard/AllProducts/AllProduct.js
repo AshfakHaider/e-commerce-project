@@ -33,9 +33,13 @@ const AllProduct = () => {
           </div>
         )
       }
+      const refreshPage = () => {
+        window.location.reload();
+    }
     return (
         <div className="font mt-4 mb-5 container-fluid">
-            <Link to ='/dashboard'><button className='shopBtn'><FontAwesomeIcon icon={faArrowLeft}/> Go Back To Dashboard</button></Link>
+            <Link to='/dashboard' target="_blank"> <button className='shopBtn'><FontAwesomeIcon icon={faArrowLeft}/> Go Back To Dashboard</button></Link>
+           
             <h4 className='text-center'>Here's all of the products</h4>
             <div className="underline mb-4 mt-2"></div>
             <div className="allProducts d-flex justify-content-center ">
