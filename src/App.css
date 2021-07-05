@@ -1,3 +1,8 @@
 .font{
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+.loader{
+    text-align: center;
+    margin-top: 250px;
+    
+}

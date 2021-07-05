@@ -7,18 +7,27 @@ import {
 } from "react-router-dom";
 import Home from './Components/Home/Home';
 import Login from './Components/Login/Login';
-import { createContext } from 'react';
+import { createContext, useEffect } from 'react';
 import { useState } from 'react';
 import Navbar from './Components/Navbar/Navbar';
 import SingleProduct from './Components/Product/SingleProduct/SingleProduct.js';
 import AddProduct from './Components/Dashboard/AddProduct/AddProduct';
 import AllProduct from './Components/Dashboard/AllProducts/AllProduct';
 import TestHome from './Components/TestHome/TestHome';
+import RiseLoader from "react-spinners/RiseLoader";
+
 
 export const UserContext = createContext();
 
 
 function App() {
+  const [load,setLoad] = useState(false);
+  useEffect(()=>{
+    setLoad(true);
+    setTimeout(()=>{
+        setLoad(false);
+    },2000)
+  },[])
 
   const [loggedInUser, setLoggedInUser] = useState(useState({
     isSignedIn: false,
@@ -26,6 +35,19 @@ function App() {
     email: '',
     img: ''
   }));
+
+  if(load){
+    return(
+     <div className="loader">
+        <RiseLoader
+      size={20} color={"#2C3C44"} loading={load} speedMultiplier={1} />
+
+     </div>
+    )
+  }
+  else{
+    <Home/>
+  }
   
 
   return (
@@ -49,7 +71,7 @@ function App() {
             <SingleProduct />
           </Route>
           <Route exact path='/'>
-            <Home />
+            <Home></Home>
             {/* <TestHome/> */}
           </Route>
         </Switch>
