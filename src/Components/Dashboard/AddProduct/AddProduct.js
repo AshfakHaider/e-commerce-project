@@ -3,6 +3,7 @@ import './AddProduct.css'
 import { useForm } from "react-hook-form";
 import axios from 'axios';
 import { useState } from 'react';
+import SidebarDash from '../SidebarDash/SidebarDash';
 
 
 
@@ -62,10 +63,13 @@ const AddProduct = () => {
     }
 
     return (
-        <div className="addProduct font">
+        <div className="addProduct font d-flex">
+            <div className="col-md-3">
+                <SidebarDash/>
+            </div>
             <div className="container-fluid">
                 <h2 className='text-center'>Add Product On Database</h2>
-                <div className="m-auto col-md-7 text-center ">
+                <div className="m-auto col-md-9 text-center ">
                     <form onSubmit={handleSubmit(onSubmit)} >
                         <h6 className='label'>Enter Product Name</h6>
                         <input type="text" name="name" placeholder='Enter product name' id='name' className='form-control' />

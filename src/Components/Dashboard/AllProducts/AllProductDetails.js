@@ -3,9 +3,8 @@ import { useState } from 'react';
 import './AllProductDetails.css';
 import Modal from 'react-modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faWindowClose } from '@fortawesome/free-solid-svg-icons'
+import { faWindowClose,faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 import axios from 'axios';
-
 
 
 
@@ -122,7 +121,9 @@ const AllProductDetails = ({ product }) => {
 
 
     return (
-        <div className="col-md-4 col-sm-6 col-xs-12 mt-4 mb-4">
+     
+           
+            <div className="col-md-4 col-sm-6 col-xs-12 mt-4 mb-4">
             <div className="pdCard">
                 <div className="pdImg-dashboard">
                     <img src={imageUrl} alt="" />
@@ -178,6 +179,7 @@ const AllProductDetails = ({ product }) => {
 
 
         </div>
+     
     );
 };
 

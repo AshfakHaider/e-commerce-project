@@ -15,19 +15,20 @@ import AddProduct from './Components/Dashboard/AddProduct/AddProduct';
 import AllProduct from './Components/Dashboard/AllProducts/AllProduct';
 import TestHome from './Components/TestHome/TestHome';
 import RiseLoader from "react-spinners/RiseLoader";
-
+import Dashboard from './Components/Dashboard/Dashboard/Dashboard';
+import SidebarDash from './Components/Dashboard/SidebarDash/SidebarDash';
 
 export const UserContext = createContext();
 
 
 function App() {
-  const [load,setLoad] = useState(false);
-  useEffect(()=>{
+  const [load, setLoad] = useState(false);
+  useEffect(() => {
     setLoad(true);
-    setTimeout(()=>{
-        setLoad(false);
-    },2000)
-  },[])
+    setTimeout(() => {
+      setLoad(false);
+    }, 2000)
+  }, [])
 
   const [loggedInUser, setLoggedInUser] = useState(useState({
     isSignedIn: false,
@@ -36,43 +37,53 @@ function App() {
     img: ''
   }));
 
-  if(load){
-    return(
-     <div className="loader">
+  if (load) {
+    return (
+      <div className="loader">
         <RiseLoader
-      size={20} color={"#2C3C44"} loading={load} speedMultiplier={1} />
+          size={20} color={"#2C3C44"} loading={load} speedMultiplier={1} />
 
-     </div>
+      </div>
     )
   }
-  else{
-    <Home/>
+  else {
+    <Home />
   }
-  
+
 
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
-        <Navbar />
+        {/* <Navbar /> */}
         <Switch>
           <Route path='/home'>
             <Home />
           </Route>
+          <Route path='/dashboard'>
+            <Dashboard />
+          </Route>
           <Route path='/login'>
             <Login />
           </Route>
-          <Route path='/allProducts'>
-            <AllProduct />
-          </Route>
-          <Route path='/addProduct'>
-            <AddProduct />
-          </Route>
+
+
           <Route path='/product/:id'>
             <SingleProduct />
           </Route>
           <Route exact path='/'>
             <Home></Home>
             {/* <TestHome/> */}
+          </Route>
+        </Switch>
+      </Router>
+      <Router>
+        {/* <SidebarDash /> */}
+        <Switch>
+          <Route path='/allProducts'>
+            <AllProduct />
+          </Route>
+          <Route path='/addProduct'>
+            <AddProduct />
           </Route>
         </Switch>
       </Router>
