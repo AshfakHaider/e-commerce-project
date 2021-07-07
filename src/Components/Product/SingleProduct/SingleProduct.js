@@ -13,15 +13,6 @@ const SingleProduct = () => {
 
     const { id } = useParams()
     const [productLoad, setProductLoad] = useState([]);
-    useEffect(()=>{
-        
-        fetch(`https://eco-shop-db.herokuapp.com/product/${id}`)
-        .then(res => res.json())
-        .then(data => {
-            //console.log(data)
-            setProductLoad(data);
-        })
-    },[])
     // const loadProduct = id => {
     //     //console.log(id)
     //     fetch(`https://eco-shop-db.herokuapp.com/product/${id}`)
@@ -52,56 +43,67 @@ const SingleProduct = () => {
     const loadSimilar = () => {
         const pdCategory = productLoad.category
         if (pdCategory === "Sugar") {
-            fetch('http://localhost:5000/category/sugar')
+            fetch('https://eco-shop-db.herokuapp.com/category/sugar')
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data);
+                    //console.log(data);
                     setSimilar(data);
                 })
         }
         if (pdCategory === "Hand Sanitizer") {
-            fetch('http://localhost:5000/category/sanitizer')
+            fetch('https://eco-shop-db.herokuapp.com/category/sanitizer')
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data);
+                   // console.log(data);
                     setSimilar(data);
                 })
         }
         if (pdCategory === "Disinfectant Spray") {
-            fetch('http://localhost:5000/category/spray')
+            fetch('https://eco-shop-db.herokuapp.com/category/spray')
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data);
+                  //  console.log(data);
                     setSimilar(data);
                 })
         }
         if (pdCategory === "Hand Wash") {
-            fetch('http://localhost:5000/category/wash')
+            fetch('https://eco-shop-db.herokuapp.com/category/wash')
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data);
+                   // console.log(data);
                     setSimilar(data);
                 })
         }
         if (pdCategory === "Baby Diaper") {
-            fetch('http://localhost:5000/category/diaper')
+            fetch('https://eco-shop-db.herokuapp.com/category/diaper')
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data);
+                   // console.log(data);
                     setSimilar(data);
                 })
         }
         if (pdCategory === "Body Spray") {
-            fetch('http://localhost:5000/category/bodySpray')
+            fetch('https://eco-shop-db.herokuapp.com/category/bodySpray')
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data);
+                   // console.log(data);
                     setSimilar(data);
                 })
         }
 
     }
-    loadSimilar();
+    
+  
+    useEffect(()=>{
+        
+        fetch(`https://eco-shop-db.herokuapp.com/product/${id}`)
+        .then(res => res.json())
+        .then(data => {
+            //console.log(data)
+            setProductLoad(data);
+            ;
+        })
+    },loadSimilar())
 
 
 
