@@ -1,40 +1,53 @@
-.product-info{
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+.product-info {
     margin-top: 50px;
 }
-.singlePdImg img{
-    
-max-width: 100%;
-max-height:100%;
-display: inline-block;
-z-index: 10;
-transition: 0.9s;
+
+.singlePdImg img {
+    max-width: 100%;
+    max-height: 100%;
+    display: inline-block;
+    transform: scale(1);
+    transition: 0.3 ease-in-out;
+    cursor: pointer;
 }
-.singlePdImg{
+.singlePdImg img:hover{
+    transform: scale(1.5);
+}
+.singlePdImg {
+    width: 100%;
     height: 400px;
     padding: 5px;
     position: relative;
     text-align: center;
-    -webkit-box-align: center;
     position: relative;
     border: 1px solid #80808078;
     border-radius: 6px;
-    background:rgb(255,255,255)
+    background: rgb(255, 255, 255);
+    overflow:hidden;
+    
 }
-.single-product{
+
+.single-product {
     margin: 70px 0px;
 }
-.single-product-info{
+
+.single-product-info {
     margin-top: 20px;
     margin-left: 30px;
 }
-.single-product-info h1{
+
+.single-product-info h1 {
     font-size: 35px;
     font-weight: 700;
-    border-bottom:1px solid #eae8e4 ;
-    padding-bottom:20px ;
-
+    border-bottom: 1px solid #eae8e4;
+    padding-bottom: 20px;
 }
-.single-pd-price{
+
+.single-pd-price {
     color: red;
     font-size: 22px;
     font-weight: 500;
@@ -43,55 +56,97 @@ transition: 0.9s;
     /* border-radius: 7px; */
     /* border: 1px solid #80808078; */
     margin: 20px 0px;
-    border-top:1px solid #eae8e4 ;
-    border-bottom:1px solid #eae8e4 ;
+    border-top: 1px solid #eae8e4;
+    border-bottom: 1px solid #eae8e4;
 }
+
 .sp-brand {
     color: #009E7F;
-   
 }
-.sp-category{
+
+.sp-category {
     margin-bottom: 35px;
 }
-.plus{
+
+.plus {
     cursor: pointer;
 }
-.minus{
+
+.minus {
     cursor: pointer;
 }
-.sp{
+
+.sp {
     display: flex;
     justify-content: center;
 }
 
-.shopBtnSp{
+.shopBtnSp {
     background-color: #19110b;
     padding: 9px 200px;
     font-weight: 700;
-    color: white;
     border: 1px solid #19110b;
+    color: white;
+    transition: ease-out 0.3s;
+    box-shadow: inset 0 0 0 0 #EAE8E4;
+}
+
+.shopBtnSp:hover {
+    border: 1px solid #19110b;
+    color: black;
+    box-shadow: inset 500px 0 0 0 #EAE8E4;
+}
+
+.similar h3 {
+    text-align: left;
+    font-size: 35px;
+    font-weight: 700;
+    color: #212529;
+    position: relative;
+    left: 25px;
+    border-bottom: 1px solid #eae8e4;
+    padding: 10px 15px;
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
-  
     /* CSS */
-    .sp{
+    .sp {
         display: block;
     }
-    
-  }
-  
-  /* 
+    .shopBtnSp {
+        padding: 9px 150px;
+    }
+    .single-product-info {
+        margin-top: 20px;
+    }
+    .shopBtnSp:hover {
+        border: 1px solid #19110b;
+        color: black;
+        box-shadow: inset 300px 0 0 0 #EAE8E4;
+    }
+}
+
+/* 
     ##Device = Most of the Smartphones Mobiles (Portrait)
     ##Screen = B/w 320px to 479px
   */
-  
-  @media (min-width: 320px) and (max-width: 480px) {
-    
+
+@media (min-width: 320px) and (max-width: 480px) {
     /* CSS */
-    .sp{
+    .sp {
         display: block;
     }
-    
-  }
-  
+    .shopBtnSp {
+        padding: 5px 95px;
+    }
+    .single-product-info {
+        margin-top: 20px;
+        position: relative;
+        right: 35px
+    }
+    .shopBtnSp:hover {
+        border: 1px solid #19110b;
+        color: black;
+        box-shadow: inset 300px 0 0 0 #EAE8E4;
+    }
+}

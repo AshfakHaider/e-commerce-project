@@ -1,26 +1,38 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './SingleProduct.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons'
 import Navbar from '../../Navbar/Navbar'
+import SimilarProduct from './SimilarProduct';
 
 const SingleProduct = () => {
     const [count, setCount] = useState(1);
-   
+    const [similar, setSimilar] = useState([]);
+
     const { id } = useParams()
     const [productLoad, setProductLoad] = useState([]);
-    const loadProduct = id => {
-        //console.log(id)
+    useEffect(()=>{
+        
         fetch(`https://eco-shop-db.herokuapp.com/product/${id}`)
-            .then(res => res.json())
-            .then(data => {
-                //console.log(data)
-                setProductLoad(data);
-            })
-    }
-    loadProduct(id);
+        .then(res => res.json())
+        .then(data => {
+            //console.log(data)
+            setProductLoad(data);
+        })
+    },[])
+    // const loadProduct = id => {
+    //     //console.log(id)
+    //     fetch(`https://eco-shop-db.herokuapp.com/product/${id}`)
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             //console.log(data)
+    //             setProductLoad(data);
+    //             loadSimilar()
+    //         })
+    // }
+    //loadProduct(id);
     const increase = () => {
 
         setCount(count + 1)
@@ -31,23 +43,81 @@ const SingleProduct = () => {
             setCount(0)
         }
     }
-    // const loadSimilar = pdName => {
-    //     fetch(`http://localhost:5000/details/${pdName}`)
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             console.log(data);
-    //             setSimilar(data);
-    //         })
-    // }
-    // loadSimilar(productLoad.category);
-   
+    // console.log(productLoad.category)
+
+
+    // JSON.stringify(s).replace(/\\"/g, '"')
+    
+    
+    const loadSimilar = () => {
+        const pdCategory = productLoad.category
+        if (pdCategory === "Sugar") {
+            fetch('http://localhost:5000/category/sugar')
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    setSimilar(data);
+                })
+        }
+        if (pdCategory === "Hand Sanitizer") {
+            fetch('http://localhost:5000/category/sanitizer')
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    setSimilar(data);
+                })
+        }
+        if (pdCategory === "Disinfectant Spray") {
+            fetch('http://localhost:5000/category/spray')
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    setSimilar(data);
+                })
+        }
+        if (pdCategory === "Hand Wash") {
+            fetch('http://localhost:5000/category/wash')
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    setSimilar(data);
+                })
+        }
+        if (pdCategory === "Baby Diaper") {
+            fetch('http://localhost:5000/category/diaper')
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    setSimilar(data);
+                })
+        }
+        if (pdCategory === "Body Spray") {
+            fetch('http://localhost:5000/category/bodySpray')
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    setSimilar(data);
+                })
+        }
+
+    }
+    loadSimilar();
+
+
+
+
+
+
+
+
+
     return (
         <div className='singleProductPage'>
             <Navbar />
             <div className='single-product container-fluid font'>
                 <div className="">
                     <div className="sp">
-                        <div className="col-md-5 singlePdImg">
+                        <div className="col-md-4 singlePdImg">
                             <img src={productLoad.imageUrl} alt="" />
                         </div>
                         <div className="col-md-5 single-product-info">
@@ -63,18 +133,22 @@ const SingleProduct = () => {
                             <button className='shopBtnSp mt-4 '>
                                 Add To Cart
                             </button>
+
                         </div>
                     </div>
                 </div>
             </div>
-            {/* <div className="similar mt-5">
-                <h3 className="text-center">Similar Products</h3>
-                <div className="container-fluid">
+            <div className="similar mt-5 font">
+                <h3>You may also like</h3>
+                <div className="pd">
+                    <div className="w-75 row m-auto">
                         {
-                            similar.map(sm=><li>{sm.name}</li>)
+                            similar.map(sm => <SimilarProduct similar={sm}></SimilarProduct>)
                         }
+                    </div>
+
                 </div>
-            </div> */}
+            </div>
         </div>
 
 

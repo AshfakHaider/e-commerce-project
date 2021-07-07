@@ -5,6 +5,7 @@ import firebaseConfig from './firebase.config';
 import { useContext } from 'react';
 import { UserContext } from '../../App';
 import { useState } from 'react';
+import './Login.css';
 
 const Login = () => {
     const [user, setUser] = useState({
@@ -62,13 +63,11 @@ const Login = () => {
             // An error happened.
         });
     }
+   
+       
     return (
-        <div>
-            this is loggin
-            {loggedInUser.isSignedIn ?
-                <button onClick={handleSignOut}>SIGN Out </button> :
-                <button onClick={handleGoogleSignIn}>SIGN IN WITH GOOGLE</button>}
-
+        <div className="login">
+            Hello guys this is login page
         </div>
     );
 };
