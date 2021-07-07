@@ -16,14 +16,14 @@
     color: white;
     transition: ease-out 0.3s;
     box-shadow: inset 0 0 0 0 #EAE8E4;
-    outline: none;
+    border: 1px solid #19110b;
 }
 .box-info{
     margin: 10px 50px;
 }
 .shopBtn:hover{
     /* background-color: #EAE8E4; */
-    outline: none;
+    border: 1px solid #19110b;
     color: black;
     box-shadow: inset 200px 0 0 0 #EAE8E4;
 }
