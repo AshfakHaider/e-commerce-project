@@ -16,7 +16,6 @@ import AllProduct from './Components/Dashboard/AllProducts/AllProduct';
 import TestHome from './Components/TestHome/TestHome';
 import RiseLoader from "react-spinners/RiseLoader";
 import Dashboard from './Components/Dashboard/Dashboard/Dashboard';
-import SidebarDash from './Components/Dashboard/SidebarDash/SidebarDash';
 
 export const UserContext = createContext();
 

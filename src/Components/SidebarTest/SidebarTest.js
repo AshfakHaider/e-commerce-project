@@ -6,6 +6,7 @@ import * as AiIcons from 'react-icons/ai';
 import { SidebarData } from '../SidebarTest/SidebarData';
 import SubMenu from './Submenu';
 import { IconContext } from 'react-icons/lib';
+import './SidebarDash.css'
 
 const Nav = styled.div`
   display: flex;
@@ -33,6 +34,8 @@ const SidebarNav = styled.nav`
   left: ${({ sidebar }) => (sidebar ? '0' : '-100%')};
   transition: 350ms;
   z-index: 10;
+  overflow-y:scroll;
+
 `;
 
 const SidebarWrap = styled.div`
@@ -40,27 +43,22 @@ const SidebarWrap = styled.div`
 `;
 
 const SidebarTest = () => {
-  const [sidebar, setSidebar] = useState(false);
-  const showSidebar = () => setSidebar(!sidebar);
+  const [sidebar, setSidebar] = useState(true);
+  
 
   return (
     <>
       <IconContext.Provider value={{ color: '#009E7F' }}>
-        <Nav>
-          <NavIcon to='#'>
-            <FaIcons.FaBars onClick={showSidebar} />
-          </NavIcon>
-        </Nav>
-        <SidebarNav sidebar={sidebar}>
+        <h3>Dashboard</h3>
+        <div className="sidebarWrap">
+        <SidebarNav sidebar={sidebar}> 
           <SidebarWrap>
-            <NavIcon to='#'>
-              <AiIcons.AiOutlineClose onClick={showSidebar} />
-            </NavIcon>
             {SidebarData.map((item, index) => {
               return <SubMenu item={item} key={index} />;
             })}
           </SidebarWrap>
         </SidebarNav>
+        </div>
       </IconContext.Provider>
     </>
   );

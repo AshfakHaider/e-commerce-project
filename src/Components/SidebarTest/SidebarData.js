@@ -7,27 +7,27 @@ import * as RiIcons from 'react-icons/ri';
 export const SidebarData = [
   {
     title: 'Overview',
-    path: '/overview',
+    path: '/dashboard',
     icon: <AiIcons.AiFillHome />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
 
     subNav: [
       {
-        title: 'Users',
-        path: '/overview/users',
+        title: 'AddProducts',
+        path: '/addProduct',
         icon: <IoIcons.IoIosPaper />
       },
       {
-        title: 'Revenue',
-        path: '/overview/revenue',
+        title: 'All Products',
+        path: '/allProducts',
         icon: <IoIcons.IoIosPaper />
       }
     ]
   },
   {
     title: 'Reports',
-    path: '/reports',
+    // path: '/reports',
     icon: <IoIcons.IoIosPaper />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
@@ -54,8 +54,22 @@ export const SidebarData = [
   },
   {
     title: 'Products',
-    path: '/products',
-    icon: <FaIcons.FaCartPlus />
+    // path: '/allProducts',
+    icon: <FaIcons.FaCartPlus />,
+    iconClosed: <RiIcons.RiArrowDownSFill />,
+    iconOpened: <RiIcons.RiArrowUpSFill />,
+    subNav: [
+      {
+        title: 'AddProducts',
+        path: '/addProduct',
+        icon: <IoIcons.IoIosPaper />
+      },
+      {
+        title: 'All Products',
+        path: '/allProducts',
+        icon: <IoIcons.IoIosPaper />
+      }
+    ]
   },
   {
     title: 'Team',
@@ -64,7 +78,6 @@ export const SidebarData = [
   },
   {
     title: 'Messages',
-    path: '/messages',
     icon: <FaIcons.FaEnvelopeOpenText />,
 
     iconClosed: <RiIcons.RiArrowDownSFill />,

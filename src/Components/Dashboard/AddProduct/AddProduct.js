@@ -3,7 +3,7 @@ import './AddProduct.css'
 import { useForm } from "react-hook-form";
 import axios from 'axios';
 import { useState } from 'react';
-import SidebarDash from '../SidebarDash/SidebarDash';
+import SidebarTest from '../../SidebarTest/SidebarTest';
 
 
 
@@ -38,7 +38,7 @@ const AddProduct = () => {
         })
             .then(res => {
                 console.log('server side response', res)
-                refreshPage();
+               refreshPage(); 
                
             });
     };
@@ -65,7 +65,7 @@ const AddProduct = () => {
     return (
         <div className="addProduct font d-flex">
             <div className="col-md-3">
-                <SidebarDash/>
+                <SidebarTest/>
             </div>
             <div className="container-fluid">
                 <h2 className='text-center'>Add Product On Database</h2>

@@ -4,7 +4,6 @@ import { useState } from 'react';
 import AllProductDetails from './AllProductDetails';
 import './AllProducts.css'
 import Loading from '../../Loading/Loading'
-import SidebarDash from '../SidebarDash/SidebarDash'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
@@ -39,7 +38,7 @@ const AllProduct = () => {
     return (
         <div className="font mt-4 mb-5 container-fluid">
             <Link to='/dashboard' target="_blank"> <button className='shopBtn'><FontAwesomeIcon icon={faArrowLeft}/> Go Back To Dashboard</button></Link>
-           
+
             <h4 className='text-center'>Here's all of the products</h4>
             <div className="underline mb-4 mt-2"></div>
             <div className="allProducts d-flex justify-content-center ">

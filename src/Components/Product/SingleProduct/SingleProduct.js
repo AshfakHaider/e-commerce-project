@@ -4,14 +4,15 @@ import { useParams } from 'react-router-dom';
 import './SingleProduct.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons'
-
+import Navbar from '../../Navbar/Navbar'
 
 const SingleProduct = () => {
     const [count, setCount] = useState(1);
+   
     const { id } = useParams()
     const [productLoad, setProductLoad] = useState([]);
     const loadProduct = id => {
-        console.log(id)
+        //console.log(id)
         fetch(`https://eco-shop-db.herokuapp.com/product/${id}`)
             .then(res => res.json())
             .then(data => {
@@ -21,38 +22,59 @@ const SingleProduct = () => {
     }
     loadProduct(id);
     const increase = () => {
-        
-        setCount(count+1)
+
+        setCount(count + 1)
     }
     const decrease = () => {
-        setCount(count-1);
-        if(count<1){
+        setCount(count - 1);
+        if (count < 1) {
             setCount(0)
         }
     }
+    // const loadSimilar = pdName => {
+    //     fetch(`http://localhost:5000/details/${pdName}`)
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             console.log(data);
+    //             setSimilar(data);
+    //         })
+    // }
+    // loadSimilar(productLoad.category);
+   
     return (
-        <div className='single-product container-fluid font'>
-            <div className="">
-                <div className="sp">
-                    <div className="col-md-5 singlePdImg">
-                        <img src={productLoad.imageUrl} alt="" />
-                    </div>
-                    <div className="col-md-5 single-product-info">
-                        <h1>
-                            {productLoad.name}
-                        </h1>
-                        <p className='mt-3 mb-2 sp-brand'>{productLoad.brand}</p>
-                        <p className='mt-2 mb-5 sp-category'>Category:{productLoad.category}</p>
-                        <h6 className='single-pd-price'>Price:{productLoad.price} taka</h6>
-                        <div className="count text-dark">
-                            <p>Qunatity:<FontAwesomeIcon icon={faMinus} onClick={decrease} className='minus ms-2' /> <input type="text" value={count} style={{width:'50px',border:'1px solid #80808078',borderRadius:'3px',textAlign:'center'}} /> <FontAwesomeIcon icon={faPlus} onClick={increase} className='plus' /> </p>
+        <div className='singleProductPage'>
+            <Navbar />
+            <div className='single-product container-fluid font'>
+                <div className="">
+                    <div className="sp">
+                        <div className="col-md-5 singlePdImg">
+                            <img src={productLoad.imageUrl} alt="" />
                         </div>
-                        <button className='shopBtn mt-4 '>
-                            Add To Cart
-                        </button>
+                        <div className="col-md-5 single-product-info">
+                            <h1>
+                                {productLoad.name}
+                            </h1>
+                            <p className='mt-3 mb-2 sp-brand'>{productLoad.brand}</p>
+                            <p className='mt-2 mb-5 sp-category'>Category:{productLoad.category}</p>
+                            <h6 className='single-pd-price'>Price:{productLoad.price} taka</h6>
+                            <div className="count text-dark">
+                                <p>Qunatity:<FontAwesomeIcon icon={faMinus} onClick={decrease} className='minus ms-2' /> <input type="text" value={count} style={{ width: '50px', border: '1px solid #80808078', borderRadius: '3px', textAlign: 'center' }} /> <FontAwesomeIcon icon={faPlus} onClick={increase} className='plus' /> </p>
+                            </div>
+                            <button className='shopBtn mt-4 '>
+                                Add To Cart
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
+            {/* <div className="similar mt-5">
+                <h3 className="text-center">Similar Products</h3>
+                <div className="container-fluid">
+                        {
+                            similar.map(sm=><li>{sm.name}</li>)
+                        }
+                </div>
+            </div> */}
         </div>
 
 

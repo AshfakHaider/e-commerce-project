@@ -10,6 +10,7 @@ const SidebarLink = styled.div`
   padding: 20px;
   list-style: none;
   height: 60px;
+  margin-top:20px;
   text-decoration: none;
   font-size: 18px;
   &:hover {
@@ -43,30 +44,41 @@ const DropdownLink = styled.div`
 const SubMenu = ({ item }) => {
   const [subnav, setSubnav] = useState(false);
 
-  const showSubnav = () => setSubnav(!subnav);
+  const showSubnav = () => {
+    if(item.subNav){
+      setSubnav(!subnav)
+    }
+
+    // setSubnav(!subnav)
+  };
+
 
   return (
     <>
-      <SidebarLink to={item.path} onClick={item.subNav && showSubnav}>
-        <div>
-          {item.icon}
-          <SidebarLabel>{item.title}</SidebarLabel>
-        </div>
+      <SidebarLink onClick={showSubnav}  >
+          <div >
+            {item.icon}
+          
+            <a href={item.path} style={{color:'white',textDecoration:'none'}}><SidebarLabel>{item.title}</SidebarLabel></a>
+          </div>
+
+        
         <div>
           {item.subNav && subnav
             ? item.iconOpened
             : item.subNav
-            ? item.iconClosed
-            : null}
+              ? item.iconClosed
+              : null}
         </div>
       </SidebarLink>
       {subnav &&
         item.subNav.map((item, index) => {
           return (
-            <DropdownLink to={item.path} key={index}>
+            <DropdownLink key={index}>
               {item.icon}
-              <SidebarLabel>{item.title}</SidebarLabel>
+              <SidebarLabel><a href={item.path} className='text-white'>{item.title}</a></SidebarLabel>
             </DropdownLink>
+
           );
         })}
     </>
