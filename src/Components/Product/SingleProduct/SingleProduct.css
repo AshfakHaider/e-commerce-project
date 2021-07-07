@@ -24,25 +24,34 @@ transition: 0.9s;
     margin: 70px 0px;
 }
 .single-product-info{
-    margin-top: 40px;
+    margin-top: 20px;
     margin-left: 30px;
 }
 .single-product-info h1{
     font-size: 35px;
-    font-weight: 500;
+    font-weight: 700;
+    border-bottom:1px solid #eae8e4 ;
+    padding-bottom:20px ;
+
 }
 .single-pd-price{
     color: red;
     font-size: 22px;
     font-weight: 500;
     padding: 10px 15px;
-    background-color: #F5F5F5;
-    border-radius: 7px;
-    border: 1px solid #80808078;
+    /* background-color: #F5F5F5; */
+    /* border-radius: 7px; */
+    /* border: 1px solid #80808078; */
     margin: 20px 0px;
+    border-top:1px solid #eae8e4 ;
+    border-bottom:1px solid #eae8e4 ;
 }
 .sp-brand {
     color: #009E7F;
+   
+}
+.sp-category{
+    margin-bottom: 35px;
 }
 .plus{
     cursor: pointer;

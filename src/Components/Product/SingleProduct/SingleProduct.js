@@ -55,7 +55,7 @@ const SingleProduct = () => {
                                 {productLoad.name}
                             </h1>
                             <p className='mt-3 mb-2 sp-brand'>{productLoad.brand}</p>
-                            <p className='mt-2 mb-5 sp-category'>Category:{productLoad.category}</p>
+                            <p className=' sp-category'>Category:{productLoad.category}</p>
                             <h6 className='single-pd-price'>Price:{productLoad.price} taka</h6>
                             <div className="count text-dark">
                                 <p>Qunatity:<FontAwesomeIcon icon={faMinus} onClick={decrease} className='minus ms-2' /> <input type="text" value={count} style={{ width: '50px', border: '1px solid #80808078', borderRadius: '3px', textAlign: 'center' }} /> <FontAwesomeIcon icon={faPlus} onClick={increase} className='plus' /> </p>
