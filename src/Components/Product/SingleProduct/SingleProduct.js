@@ -60,7 +60,7 @@ const SingleProduct = () => {
                             <div className="count text-dark">
                                 <p>Qunatity:<FontAwesomeIcon icon={faMinus} onClick={decrease} className='minus ms-2' /> <input type="text" value={count} style={{ width: '50px', border: '1px solid #80808078', borderRadius: '3px', textAlign: 'center' }} /> <FontAwesomeIcon icon={faPlus} onClick={increase} className='plus' /> </p>
                             </div>
-                            <button className='shopBtn mt-4 '>
+                            <button className='shopBtnSp mt-4 '>
                                 Add To Cart
                             </button>
                         </div>

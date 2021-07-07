@@ -10,12 +10,20 @@
     margin: 10px 0px;
 }
 .shopBtn{
-    padding: 5px 25px;
-    border: 1px solid black;
-    background: black;
+    padding: 9px 30px;
+    background: #19110b;
     margin: 10px 0px;
     color: white;
+    transition: ease-out 0.3s;
+    box-shadow: inset 0 0 0 0 #EAE8E4;
+    outline: none;
 }
 .box-info{
     margin: 10px 50px;
+}
+.shopBtn:hover{
+    /* background-color: #EAE8E4; */
+    outline: none;
+    color: black;
+    box-shadow: inset 200px 0 0 0 #EAE8E4;
 }

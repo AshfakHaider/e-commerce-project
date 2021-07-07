@@ -8,7 +8,9 @@ const CategoryDetails = ({ category }) => {
             <div className="">
                 <img src={picture} alt="" className='categoryImg w-100' />
                 <h4>{name}</h4>
+                <div className="spBtn">
                 <button className='shopBtn'>Shop Now</button>
+                </div>
             </div>
         </div>
     )

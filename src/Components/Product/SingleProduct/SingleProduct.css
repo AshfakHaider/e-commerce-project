@@ -63,6 +63,15 @@ transition: 0.9s;
     display: flex;
     justify-content: center;
 }
+
+.shopBtnSp{
+    background-color: #19110b;
+    padding: 9px 200px;
+    font-weight: 700;
+    color: white;
+    border: 1px solid #19110b;
+}
+
 @media (min-width: 481px) and (max-width: 767px) {
   
     /* CSS */
