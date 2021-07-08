@@ -26,7 +26,7 @@ const AddFashionPd = () => {
             imageUrl: imgUrl
         }
         //console.log(eventData);
-        const url = `http://localhost:5000/addFood`;
+        const url = `https://eco-shop-db.herokuapp.com/addFood`;
         fetch(url, {
             method: 'POST',
             headers: {

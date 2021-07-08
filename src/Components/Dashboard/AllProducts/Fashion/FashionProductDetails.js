@@ -31,7 +31,7 @@ const FashionProductDetails = ({ product }) => {
     // deleting product
     const deleteProduct = id => {
   
-        fetch(`http://localhost:5000/deleteFashion/${id}`, {
+        fetch(`https://eco-shop-db.herokuapp.com/deleteFashion/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
@@ -63,7 +63,7 @@ const FashionProductDetails = ({ product }) => {
     const loadProduct = id =>{
         openModal();
         //console.log(id)
-        fetch(`https://localhost:5000/fashion/${id}`)
+        fetch(`https://eco-shop-db.herokuapp.com/fashion/${id}`)
         .then(res=> res.json())
         .then(data=>{
             //console.log(data)
@@ -87,7 +87,7 @@ const FashionProductDetails = ({ product }) => {
             brand:brand,
             imageUrl: imgUrl
         };
-        fetch(`https://localhost:5000/updateFashion/${id}`, {
+        fetch(`https://eco-shop-db.herokuapp.com/updateFashion/${id}`, {
             method: 'PATCH',
             headers:{
                 'content-type':'application/json'
