@@ -1,12 +1,12 @@
 .header{
-    background: url('../../images/landingBannerTop.jpg');
+    background: url('../../images/headerBanner.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    height: 300px;
+    height: 400px;
 }
 .header-content{
-    padding: 70px 0px;
+    padding: 115px 0px;
 }
 .header-content h1{
     font-size: 45px;

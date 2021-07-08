@@ -1,6 +1,7 @@
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     width: 0px;
-}
+    visibility: hidden;
+} */
 
 .product-info {
     margin-top: 50px;
@@ -32,7 +33,8 @@
 }
 
 .single-product {
-    margin: 70px 0px;
+    margin-top: 70px;
+
 }
 
 .single-product-info {

@@ -5,13 +5,40 @@
     top: 25px;
 }
 .footer-des h5{
-    margin: 10px 0px;
+    margin-top: 25px;
 }
-.footer-des p{
+.footer p{
     margin: 0px;
     padding: 0px;
     color: gray;
 }
 .footer{
-    background-color: #F7F7F7;
+    background-color: #000;
+    color:#fafafa;
+    
 }
+.ft-container{
+    padding-top: 25px;
+    padding-bottom: 60px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.copyright{
+    position: relative;
+    top: 55px;
+}
+@media (min-width: 320px) and (max-width: 480px) {
+        .footer-form{
+            visibility: hidden;
+        }
+    
+}
+@media (min-width: 481px) and (max-width: 767px) {
+    .footer-form{
+        visibility: hidden;
+    }
+
+    
+}
+  
+  

@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons'
 import Navbar from '../../Navbar/Navbar'
 import SimilarProduct from './SimilarProduct';
+import Footer from '../../Footer/Footer';
 
 const SingleProduct = () => {
     const [count, setCount] = useState(1);
