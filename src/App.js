@@ -11,13 +11,17 @@ import { createContext, useEffect } from 'react';
 import { useState } from 'react';
 import Navbar from './Components/Navbar/Navbar';
 import SingleProduct from './Components/Product/SingleProduct/SingleProduct.js';
+import AddFashion from './Components/Dashboard/AddProduct/AddFashionPd';
+import AddFood from './Components/Dashboard/AddProduct/AddFoodPd';
 import AddGrocaryPd from './Components/Dashboard/AddProduct/AddGrocaryPd';
-import AllProduct from './Components/Dashboard/AllProducts/AllProduct';
+import AllGrocaryProduct from './Components/Dashboard/AllProducts/Grocary/AllGrocaryProduct';
 import TestHome from './Components/TestHome/TestHome';
 import RiseLoader from "react-spinners/RiseLoader";
 import Dashboard from './Components/Dashboard/Dashboard/Dashboard';
 import Footer from './Components/Footer/Footer';
 import NotFound from './Components/NotFound/NotFound';
+import FashionProduct from './Components/Dashboard/AllProducts/Fashion/FashionProduct';
+import Food from  './Components/Dashboard/AllProducts/Food/Food'
 
 export const UserContext = createContext();
 
@@ -86,13 +90,25 @@ function App() {
           <Route path='/dashboard'>
             <Dashboard />
           </Route>
-          <Route path='/allProducts'>
+          <Route path='/allProducts/grocary'>
             <Navbar />
-            <AllProduct />
+            <AllGrocaryProduct/>
             <Footer />
           </Route>
           <Route path='/addProduct/addGrocary'>
             <AddGrocaryPd />
+          </Route>
+          <Route path='/addProduct/addFashion'>
+            <AddFashion/>
+          </Route>
+          <Route path='/addProduct/addFood'>
+            <AddFood />
+          </Route>
+          <Route path='/allProducts/fashion'>
+            <FashionProduct/>
+          </Route>
+          <Route path='/allProducts/food'>
+            <Food/>
           </Route>
           <Route path="*">
             <NotFound />

@@ -26,29 +26,29 @@ export const SidebarData = [
     ]
   },
   {
-    title: 'Reports',
+    title: 'Add Products',
     // path: '/reports',
-    icon: <IoIcons.IoIosPaper />,
+    icon: <IoIcons.IoMdAddCircle />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
 
     subNav: [
       {
-        title: 'Reports',
-        path: '/reports/reports1',
-        icon: <IoIcons.IoIosPaper />,
+        title: 'Grocary Product',
+        path: '/addProduct/addGrocary',
+        icon: <IoIcons.IoMdAddCircleOutline />,
         cName: 'sub-nav'
       },
       {
-        title: 'Reports 2',
-        path: '/reports/reports2',
-        icon: <IoIcons.IoIosPaper />,
+        title: 'Fashion Products ',
+        path: '/addProduct/addFashion',
+        icon: <IoIcons.IoMdAddCircleOutline />,
         cName: 'sub-nav'
       },
       {
-        title: 'Reports 3',
-        path: '/reports/reports3',
-        icon: <IoIcons.IoIosPaper />
+        title: 'Food Products',
+        path: '/addProduct/addFood',
+        icon: <IoIcons.IoMdAddCircleOutline />
       }
     ]
   },
@@ -60,13 +60,18 @@ export const SidebarData = [
     iconOpened: <RiIcons.RiArrowUpSFill />,
     subNav: [
       {
-        title: 'AddProducts',
-        path: '/addProduct',
+        title: 'Grocary Products',
+        path: '/allProducts/grocary',
         icon: <IoIcons.IoIosPaper />
       },
       {
-        title: 'All Products',
-        path: '/allProducts',
+        title: 'Fashion Product',
+        path: '/allProducts/fashion',
+        icon: <IoIcons.IoIosPaper />
+      },
+      {
+        title: 'Food Product',
+        path: '/allProducts/food',
         icon: <IoIcons.IoIosPaper />
       }
     ]

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import './AllProductDetails.css';
+import './AllGrocaryProduct.css';
 import Modal from 'react-modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWindowClose,faArrowLeft } from '@fortawesome/free-solid-svg-icons'
