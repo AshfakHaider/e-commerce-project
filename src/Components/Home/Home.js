@@ -11,9 +11,7 @@ import About from '../About/About'
 import Contact from '../Contact/Contact'
 import Sidebar from '../Sidebar/Sidebar'
 import Test from '../Test/Test';
-import FooterTop from '../FooterTop/FooterTop';
-import Footer from '../Footer/Footer';
-import SidebarTest from '../SidebarTest/SidebarTest';
+
 
 
 const Home = () => {
@@ -27,7 +25,7 @@ const Home = () => {
          <Testimonial/>
          <About/>
          <Contact/>
-         <Footer/>
+
         </div>
     );
 };
