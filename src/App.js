@@ -75,7 +75,7 @@ function App() {
           <Route path='/product/:id'>
             <Navbar />
             <SingleProduct />
-            <Footer />
+            <Footer/>
           </Route>
           <Route exact path='/'>
             <Navbar />

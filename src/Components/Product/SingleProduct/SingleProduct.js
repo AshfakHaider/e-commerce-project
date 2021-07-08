@@ -7,8 +7,9 @@ import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons'
 import Navbar from '../../Navbar/Navbar'
 import SimilarProduct from './SimilarProduct';
 import Footer from '../../Footer/Footer';
+import { useCallback } from 'react';
 
-const SingleProduct = () => {
+const SingleProduct = () =>{
     const [count, setCount] = useState(1);
     const [similar, setSimilar] = useState([]);
 
@@ -39,15 +40,15 @@ const SingleProduct = () => {
 
 
     // JSON.stringify(s).replace(/\\"/g, '"')
-    
-    
+
+
     const loadSimilar = () => {
         const pdCategory = productLoad.category
         if (pdCategory === "Sugar") {
             fetch('https://eco-shop-db.herokuapp.com/category/sugar')
                 .then(res => res.json())
                 .then(data => {
-                    //console.log(data);
+                    // console.log(data);
                     setSimilar(data);
                 })
         }
@@ -93,30 +94,49 @@ const SingleProduct = () => {
         }
 
     }
+
+
+    const refreshPage = () =>{
+        window.location.reload();
+    }
+
+    //  useEffect(()=>{
+    //     fetch(`http://localhost:5000/productSimilar/${productLoad.category}`)
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             console.log(data);
+    //             setSimilar(data);
+    //         })
+    //
     
-  
-    useEffect(()=>{
-        
+
+    
+    // useEffect(()=>{
+    //     const url = `http://localhost:5000/productSimilar/${productLoad.category}`
+    //     fetch(url)
+    //     .then(res=>res.json())
+    //     .then(data=>{
+    //         console.log(data)
+    //         setSimilar(data);
+    //     })
+    // },[])
+   
+    useEffect(() => {
         fetch(`https://eco-shop-db.herokuapp.com/product/${id}`)
-        .then(res => res.json())
-        .then(data => {
-            //console.log(data)
-            setProductLoad(data);
-            ;
-        })
-    },loadSimilar())
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                setProductLoad(data);
+            })
+    },[])
 
-
-
-
-
-
+    loadSimilar();
 
 
 
     return (
         <div className='singleProductPage'>
-          
+
             <div className='single-product container-fluid font'>
                 <div className="">
                     <div className="sp">
