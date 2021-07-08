@@ -116,7 +116,7 @@ const SingleProduct = () => {
 
     return (
         <div className='singleProductPage'>
-            <Navbar />
+          
             <div className='single-product container-fluid font'>
                 <div className="">
                     <div className="sp">

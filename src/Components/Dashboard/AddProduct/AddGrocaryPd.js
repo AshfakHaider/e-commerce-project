@@ -1,5 +1,5 @@
 import React from 'react';
-import './AddProduct.css'
+import './AddGrocaryPd.css'
 import { useForm } from "react-hook-form";
 import axios from 'axios';
 import { useState } from 'react';
@@ -68,7 +68,7 @@ const AddProduct = () => {
                 <SidebarTest/>
             </div>
             <div className="container-fluid">
-                <h2 className='text-center'>Add Product On Database</h2>
+                <h2 className='text-center'>Add Grocary Product On Database</h2>
                 <div className="m-auto col-md-9 text-center ">
                     <form onSubmit={handleSubmit(onSubmit)} >
                         <h6 className='label'>Enter Product Name</h6>

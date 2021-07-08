@@ -57,7 +57,7 @@ const Product = () => {
 
             </div>
             <div className="text-center">
-                <button className='loadMoreBtn' onClick={loadMore}>Load More</button>
+                <button className='shopBtn' onClick={loadMore}>Load More</button>
             </div>
         </div>
 

@@ -11,12 +11,13 @@ import { createContext, useEffect } from 'react';
 import { useState } from 'react';
 import Navbar from './Components/Navbar/Navbar';
 import SingleProduct from './Components/Product/SingleProduct/SingleProduct.js';
-import AddProduct from './Components/Dashboard/AddProduct/AddProduct';
+import AddGrocaryPd from './Components/Dashboard/AddProduct/AddGrocaryPd';
 import AllProduct from './Components/Dashboard/AllProducts/AllProduct';
 import TestHome from './Components/TestHome/TestHome';
 import RiseLoader from "react-spinners/RiseLoader";
 import Dashboard from './Components/Dashboard/Dashboard/Dashboard';
 import Footer from './Components/Footer/Footer';
+import NotFound from './Components/NotFound/NotFound';
 
 export const UserContext = createContext();
 
@@ -54,40 +55,49 @@ function App() {
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
-        {/* <Navbar /> */}
-        
+
+
 
         <Switch>
           <Route path='/home'>
+            <Navbar />
             <Home />
+            <Footer />
           </Route>
           <Route path='/dashboard'>
             <Dashboard />
           </Route>
           <Route path='/login'>
+            <Navbar />
             <Login />
+            <Footer />
           </Route>
-
-
           <Route path='/product/:id'>
+            <Navbar />
             <SingleProduct />
+            <Footer />
           </Route>
           <Route exact path='/'>
+            <Navbar />
             <Home></Home>
+            <Footer />
             {/* <TestHome/> */}
           </Route>
-        </Switch>
-      </Router>
-      <Footer/>
-      <Router>
-        {/* <SidebarDash /> */}
-        <Switch>
+          <Route path='/dashboard'>
+            <Dashboard />
+          </Route>
           <Route path='/allProducts'>
+            <Navbar />
             <AllProduct />
+            <Footer />
           </Route>
-          <Route path='/addProduct'>
-            <AddProduct />
+          <Route path='/addProduct/addGrocary'>
+            <AddGrocaryPd />
           </Route>
+          <Route path="*">
+            <NotFound />
+          </Route>
+
         </Switch>
       </Router>
     </UserContext.Provider>
