@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useEffect } from 'react';
 import './review.js'
 import Review from './review.js';
 
 const Testimonial = () => {
+
     return (
         <main>
         <div className="container testimonial font">
@@ -11,6 +13,9 @@ const Testimonial = () => {
             <div className="underline"></div>
           </div>
           <Review/>
+          {/* {
+            reviews.map(review=><Review rv={review}/>)
+          } */}
         </div>
       </main>
   

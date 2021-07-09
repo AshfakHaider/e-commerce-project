@@ -11,6 +11,7 @@ import About from '../About/About'
 import Contact from '../Contact/Contact'
 import Sidebar from '../Sidebar/Sidebar'
 import Test from '../Test/Test';
+import SliderReview from '../Testimonial/SliderReview/SliderReview';
 
 
 
@@ -22,7 +23,9 @@ const Home = () => {
          <Category/>
          <Product/>
          <Tutorial/>
-         <Testimonial/>
+         <SliderReview/>
+         {/* <Testimonial/> */}
+
          <About/>
          <Contact/>
 
