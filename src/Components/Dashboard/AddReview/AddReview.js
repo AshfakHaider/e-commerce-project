@@ -25,7 +25,7 @@ const AddReview = () => {
             imageUrl: imgUrl
         }
         console.log(eventData);
-        const url = 'http://localhost:5000/addReview'
+        const url = 'https://eco-shop-db.herokuapp.com/addReview'
         fetch(url,{
             method:'POST',
             headers:{

@@ -5,12 +5,9 @@ import Header from '../Header/Header';
 import HeaderContent from '../HeaderContent/HeaderContent';
 import Category from '../Category/Category';
 import Tutorial from '../Tutorial/Tutorial';
-import Testimonial from '../Testimonial/Testimonial';
 import Product from '../Product/Product';
 import About from '../About/About'
 import Contact from '../Contact/Contact'
-import Sidebar from '../Sidebar/Sidebar'
-import Test from '../Test/Test';
 import SliderReview from '../Testimonial/SliderReview/SliderReview';
 
 
@@ -25,7 +22,6 @@ const Home = () => {
          <Tutorial/>
          <SliderReview/>
          {/* <Testimonial/> */}
-
          <About/>
          <Contact/>
 

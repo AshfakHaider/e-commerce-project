@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import '@splidejs/splide/dist/css/themes/splide-default.min.css';
 import { Splide, SplideSlide,Destroy } from '@splidejs/react-splide';
 import './SliderReview.css'
+import '../Testimonial.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft, faChevronRight, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
 
@@ -11,7 +12,7 @@ const SliderReview = () => {
     const [reviews, setReviews] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/review')
+        fetch('https://eco-shop-db.herokuapp.com/review')
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -24,7 +25,6 @@ const SliderReview = () => {
         rewind: true,
         gap: '1rem',
         Width: 1000,
-
         perPage: 1,
         perMove: 1,
         pagination: false,
