@@ -68,8 +68,8 @@ const AddFashionPd = () => {
                 <h2 className='text-center'>Add Fashion Product On Database</h2>
                 <div className="m-auto col-md-9 text-center ">
                     <form onSubmit={handleSubmit(onSubmit)} >
-                        <h6 className='label'>Enter Fashion Name</h6>
-                        <input type="text" name="name" placeholder='Enter product name' id='name' className='form-control' />
+                        <h6 className='label'>Enter Your Name</h6>
+                        <input type="text" name="name" placeholder='Enter  Your name' id='name' className='form-control' />
                         <br />
                         <h6 className='label'>Enter Product Price</h6>
                         <input type='text' name='price' placeholder='Enter Product Price' id='price' className='form-control' />
@@ -89,7 +89,7 @@ const AddFashionPd = () => {
                         {errors.exampleRequired && <span>This field is required</span>}
                         <br />
                         <div>
-                            <button type='submit' className='shopBtn'>Submit</button>
+                            <button type='submit' className='submitBtn'>Submit</button>
                         </div>
                     </form>
                 </div>

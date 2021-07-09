@@ -22,6 +22,7 @@ import Footer from './Components/Footer/Footer';
 import NotFound from './Components/NotFound/NotFound';
 import FashionProduct from './Components/Dashboard/AllProducts/Fashion/FashionProduct';
 import Food from  './Components/Dashboard/AllProducts/Food/Food'
+import AddReview from './Components/Dashboard/AddReview/AddReview';
 
 export const UserContext = createContext();
 
@@ -109,6 +110,9 @@ function App() {
           </Route>
           <Route path='/allProducts/food'>
             <Food/>
+          </Route>
+          <Route path='/addReview'>
+            <AddReview/>
           </Route>
           <Route path="*">
             <NotFound />
