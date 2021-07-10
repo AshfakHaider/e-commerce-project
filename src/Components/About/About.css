@@ -37,7 +37,7 @@
 @media (min-width: 320px) and (max-width: 480px) {
   
     .about{
-        margin-top: 50px;
+        margin-top: 70px;
         margin-bottom: 40px;
     
     }
@@ -46,7 +46,7 @@
 }
 @media (min-width: 768px) and (max-width: 1024px) {
     .about{
-        margin-top: 50px;
+        margin-top: 70px;
         margin-bottom: 40px;
     
     }
