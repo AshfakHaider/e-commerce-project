@@ -58,7 +58,7 @@ const SliderReview = () => {
                                 </span>
                             </div>
 
-                            <div className="col-md-6 col-sm-6 col-xs-12 m-auto text-center">
+                            <div className="col-md-10 col-sm-6 col-xs-12 m-auto text-center">
                                 <div className="author">{review.name}</div>
                                 <p className="job">{review.job}</p>
                                 <p className="info">{review.review}</p>

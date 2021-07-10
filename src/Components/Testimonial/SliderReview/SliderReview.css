@@ -3,23 +3,17 @@
 }
 .review-box{
     position: relative;
-    top: 80px;
+    top: 50px;
     right: 30px;
     
 }
 .splide{
-    height: 600px;
+    height: 800px;
     background-color: fafafa;
     margin: 15px 0px;
 } 
 @media (min-width: 481px) and (max-width: 767px) {
   
-    .review-box{
-        position: relative;
-        top: 80px;
-        right:0px;
-        box-shadow:  ​8px 8px 8px #fafafa;
-    }
         
   }
   
@@ -30,12 +24,7 @@
   
   @media (min-width: 320px) and (max-width: 480px) {
     
-        .review-box{
-        position: relative;
-        top: 80px;
-        right:0px;
-        
-    }
+       
         .splide__slide{
             width: 400px;
         }
@@ -44,12 +33,7 @@
   @media (min-width: 768px) and (max-width: 1024px) {
   
     /* CSS */
-    .review-box{
-        position: relative;
-        top: 80px;
-        right:0px;
-        
-    }
+
         .splide__slide{
             width: 800px;
         }
