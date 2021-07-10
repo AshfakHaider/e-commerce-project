@@ -61,12 +61,9 @@ const AddFashionPd = () => {
     }
     return (
         <div className="addProduct font d-flex">
-            <div className="col-md-3">
-                <SidebarTest/>
-            </div>
-            <div className="container-fluid">
+            <div className="container-fluid ms-md-3 ms-0">
                 <h2 className='text-center'>Add Fashion Product On Database</h2>
-                <div className="m-auto col-md-9 text-center ">
+                <div className="m-auto col-lg-8 col-md-7 col-sm-6 col-xs-12 text-center ">
                     <form onSubmit={handleSubmit(onSubmit)} >
                         <h6 className='label'>Enter Your Name</h6>
                         <input type="text" name="name" placeholder='Enter  Your name' id='name' className='form-control' />

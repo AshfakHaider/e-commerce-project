@@ -33,7 +33,7 @@ const FashionProduct = () => {
     }
     return (
         <div className="font mt-4 mb-5 container-fluid">
-            <Link to='/dashboard' target="_blank"> <button className='shopBtn'><FontAwesomeIcon icon={faArrowLeft}/> Go Back To Dashboard</button></Link>
+            <Link to='/dashboard' target="_blank"> <button className='submitBtn'><FontAwesomeIcon icon={faArrowLeft}/> Go Back To Dashboard</button></Link>
 
             <h4 className='text-center'>Here's all of the Fashion products</h4>
             <div className="underline mb-4 mt-2"></div>

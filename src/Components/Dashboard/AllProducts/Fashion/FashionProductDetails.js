@@ -134,9 +134,9 @@ const FashionProductDetails = ({ product }) => {
 
         </div>
         <div className="upDelBtn d-flex justify-content-between" >
-            <button className='btn btn-warning me-2' onClick={()=> loadProduct(_id)}>Update </button>
+            <button className='shopBtn me-2' onClick={()=> loadProduct(_id)}>Update </button>
             <div>
-                <button className='btn btn-danger ms-2' onClick={() => deleteProduct(_id)}>Delete </button>
+                <button className='shopBtn ms-2' onClick={() => deleteProduct(_id)}>Delete </button>
             </div>
         </div>
         <Modal
@@ -166,7 +166,7 @@ const FashionProductDetails = ({ product }) => {
                     <input type='text' defaultValue={pdLoad.category} placeholder='Enter Product Category' className='form-control mt-2 mb-2' id='categoryUpdate' />
                     <h6 className='label-modal'>Enter Product Picture</h6>
                     <input type='file' placeholder='Enter Product Picture' className='form-control mt-2 mb-2' id='imageUpdate' onChange={handleImgUpload} />
-                    <button onClick={()=> updateProduct(_id)} className='btn btn-warning mt-3'>Update Product</button>
+                    <button onClick={()=> updateProduct(_id)} className='shopBtn mt-3'>Update Product</button>
                 </form>
             </div>
 

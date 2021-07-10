@@ -23,6 +23,9 @@ import NotFound from './Components/NotFound/NotFound';
 import FashionProduct from './Components/Dashboard/AllProducts/Fashion/FashionProduct';
 import Food from  './Components/Dashboard/AllProducts/Food/Food'
 import AddReview from './Components/Dashboard/AddReview/AddReview';
+import SidebarTest from './Components/SidebarTest/SidebarTest';
+import CheckOut from './Components/CheckOut/CheckOut';
+
 
 export const UserContext = createContext();
 
@@ -70,6 +73,7 @@ function App() {
             <Footer />
           </Route>
           <Route path='/dashboard'>
+            <SidebarTest/>
             <Dashboard />
           </Route>
           <Route path='/login'>
@@ -81,6 +85,9 @@ function App() {
             <Navbar />
             <SingleProduct />
             <Footer/>
+          </Route>
+          <Route path='/checkOut'>
+            <CheckOut/>
           </Route>
           <Route exact path='/'>
             <Navbar />
@@ -97,19 +104,27 @@ function App() {
             <Footer />
           </Route>
           <Route path='/addProduct/addGrocary'>
+          <SidebarTest/>
+
             <AddGrocaryPd />
           </Route>
           <Route path='/addProduct/addFashion'>
+            <SidebarTest/>
             <AddFashion/>
           </Route>
           <Route path='/addProduct/addFood'>
+          <SidebarTest/>
             <AddFood />
           </Route>
           <Route path='/allProducts/fashion'>
+            <Navbar/>
             <FashionProduct/>
+            <Footer/>
           </Route>
           <Route path='/allProducts/food'>
+            <Navbar/>
             <Food/>
+            <Footer/>
           </Route>
           <Route path='/addReview'>
             <AddReview/>

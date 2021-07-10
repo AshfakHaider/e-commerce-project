@@ -44,7 +44,7 @@ const SidebarWrap = styled.div`
 `;
 
 const SidebarTest = () => {
-  const [sidebar, setSidebar] = useState(true);
+  const [sidebar, setSidebar] = useState(false);
   const handleResize = () => {
     if (window.innerWidth < 720) {
       setSidebar(false)
