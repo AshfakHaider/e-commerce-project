@@ -20,3 +20,36 @@
     border-radius: 6px;
     padding: 10px 15px;
 }
+@media (min-width: 481px) and (max-width: 767px) {
+  
+    .about{
+        margin-top: 50px;
+        margin-bottom: 40px;
+    
+    }
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+    .about{
+        margin-top: 50px;
+        margin-bottom: 40px;
+    
+    }
+
+  
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .about{
+        margin-top: 50px;
+        margin-bottom: 40px;
+    
+    }
+
+  /* CSS */
+}
