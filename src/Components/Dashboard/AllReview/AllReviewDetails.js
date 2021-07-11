@@ -4,7 +4,7 @@ const AllReviewDetails = ({rv}) => {
     const{_id,name,job,imageUrl,review}= rv;
 
     const deleteReview = id =>{
-        fetch(`http://localhost:5000/deleteReview/${id}`,{
+        fetch(`https://eco-shop-db.herokuapp.com/deleteReview/${id}`,{
             method:"DELETE"
         })
         .then(res=>res.json())

@@ -6,7 +6,7 @@ import AllReviewDetails from './AllReviewDetails';
 const AllReview = () => {
     const [review,setReview] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/review')
+        fetch('https://eco-shop-db.herokuapp.com/review')
         .then(res=>res.json())
         .then(data=>{
             console.log(data);
