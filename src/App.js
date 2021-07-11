@@ -25,6 +25,7 @@ import Food from './Components/Dashboard/AllProducts/Food/Food'
 import AddReview from './Components/Dashboard/AddReview/AddReview';
 import SidebarTest from './Components/SidebarTest/SidebarTest';
 import CheckOut from './Components/CheckOut/CheckOut';
+import AllReview from './Components/Dashboard/AllReview/AllReview';
 
 
 export const UserContext = createContext();
@@ -128,6 +129,10 @@ function App() {
           <Route path='/addReview'>
             <SidebarTest/>
             <AddReview />
+          </Route>
+          <Route path='/allReview'>
+            <SidebarTest/>
+            <AllReview/>
           </Route>
           <Route path="*">
             <Navbar/>

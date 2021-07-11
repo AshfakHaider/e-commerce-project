@@ -134,9 +134,9 @@ const FashionProductDetails = ({ product }) => {
 
         </div>
         <div className="upDelBtn d-flex justify-content-between" >
-            <button className='shopBtn me-2' onClick={()=> loadProduct(_id)}>Update </button>
+            <button className='shopBtn btn-warning text-dark me-2' onClick={()=> loadProduct(_id)}>Update </button>
             <div>
-                <button className='shopBtn ms-2' onClick={() => deleteProduct(_id)}>Delete </button>
+                <button className='shopBtn btn-danger text-dark ms-2' onClick={() => deleteProduct(_id)}>Delete </button>
             </div>
         </div>
         <Modal

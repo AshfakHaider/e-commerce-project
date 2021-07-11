@@ -83,6 +83,11 @@ export const SidebarData = [
     icon: <IoIcons.IoMdStar />
   },
   {
+    title: 'All Reviews',
+    path: '/allReview',
+    icon: <IoIcons.IoMdStar />
+  },
+  {
     title: 'Messages',
     icon: <FaIcons.FaEnvelopeOpenText />,
 
