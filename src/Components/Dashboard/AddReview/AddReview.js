@@ -73,7 +73,7 @@ const AddReview = () => {
     return (
         <div className="addProduct font d-flex">
 
-            <div className="container-fluid">
+            <div className="container-fluid ms-md-4 ms-0">
                 <h2 className='text-center'>Add Review</h2>
                 <div className="icons-review text-center mb-3">
                 <FontAwesomeIcon icon={faStar} style={{color:'red'}}></FontAwesomeIcon>
