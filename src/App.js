@@ -21,7 +21,7 @@ import Dashboard from './Components/Dashboard/Dashboard/Dashboard';
 import Footer from './Components/Footer/Footer';
 import NotFound from './Components/NotFound/NotFound';
 import FashionProduct from './Components/Dashboard/AllProducts/Fashion/FashionProduct';
-import Food from  './Components/Dashboard/AllProducts/Food/Food'
+import Food from './Components/Dashboard/AllProducts/Food/Food'
 import AddReview from './Components/Dashboard/AddReview/AddReview';
 import SidebarTest from './Components/SidebarTest/SidebarTest';
 import CheckOut from './Components/CheckOut/CheckOut';
@@ -73,7 +73,7 @@ function App() {
             <Footer />
           </Route>
           <Route path='/dashboard'>
-            <SidebarTest/>
+            <SidebarTest />
             <Dashboard />
           </Route>
           <Route path='/login'>
@@ -84,10 +84,10 @@ function App() {
           <Route path='/product/:id'>
             <Navbar />
             <SingleProduct />
-            <Footer/>
+            <Footer />
           </Route>
           <Route path='/checkOut'>
-            <CheckOut/>
+            <CheckOut />
           </Route>
           <Route exact path='/'>
             <Navbar />
@@ -100,36 +100,37 @@ function App() {
           </Route>
           <Route path='/allProducts/grocary'>
             <Navbar />
-            <AllGrocaryProduct/>
+            <AllGrocaryProduct />
             <Footer />
           </Route>
           <Route path='/addProduct/addGrocary'>
-          <SidebarTest/>
-
+            <SidebarTest />
             <AddGrocaryPd />
           </Route>
           <Route path='/addProduct/addFashion'>
-            <SidebarTest/>
-            <AddFashion/>
+            <SidebarTest />
+            <AddFashion />
           </Route>
           <Route path='/addProduct/addFood'>
-          <SidebarTest/>
+            <SidebarTest />
             <AddFood />
           </Route>
           <Route path='/allProducts/fashion'>
-            <Navbar/>
-            <FashionProduct/>
-            <Footer/>
+            <Navbar />
+            <FashionProduct />
+            <Footer />
           </Route>
           <Route path='/allProducts/food'>
-            <Navbar/>
-            <Food/>
-            <Footer/>
+            <Navbar />
+            <Food />
+            <Footer />
           </Route>
           <Route path='/addReview'>
-            <AddReview/>
+            <SidebarTest/>
+            <AddReview />
           </Route>
           <Route path="*">
+            <Navbar/>
             <NotFound />
           </Route>
 
