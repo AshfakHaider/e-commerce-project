@@ -29,7 +29,7 @@ const AllReviewDetails = ({rv}) => {
                 <p>{review}</p>
             </div>
         </div>
-        <button className='shopBtn btn-danger text-dark ' onClick={()=>deleteReview(_id)}>Delete Review</button>
+        <button className='submitBtn ' onClick={()=>deleteReview(_id)}>Delete Review</button>
         </div>
 
     );
