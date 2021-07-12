@@ -10,6 +10,7 @@ import About from '../About/About'
 import Contact from '../Contact/Contact'
 import SliderReview from '../Testimonial/SliderReview/SliderReview';
 import Hero from '../Hero-section/Hero';
+import TopProduct from '../TopProduct/TopProduct';
 
 
 
@@ -17,6 +18,7 @@ const Home = () => {
     return (
         <div className="home font m-auto">
         <Hero/>
+        <TopProduct/>
          <HeaderContent/>
          <Category/>
          <Product/>

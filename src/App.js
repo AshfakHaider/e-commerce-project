@@ -27,6 +27,7 @@ import CheckOut from './Components/CheckOut/CheckOut';
 import AllReview from './Components/Dashboard/AllReview/AllReview';
 import NavTop from './Components/Nav/NavTop';
 import Nav from './Components/Nav/Nav'
+import AddTopProduct from './Components/Dashboard/AddProduct/AddTopProduct';
 
 export const UserContext = createContext();
 
@@ -122,6 +123,11 @@ function App() {
             <SidebarTest />
             <AddFood />
           </Route>
+          <Route path='/addProduct/topProduct'>
+            <SidebarTest />
+            <AddTopProduct />
+          </Route>
+
           <Route path='/allProducts/fashion'>
           <NavTop/>
             <Nav/>

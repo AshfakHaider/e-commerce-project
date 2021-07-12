@@ -50,7 +50,13 @@ export const SidebarData = [
         title: 'Food Products',
         path: '/addProduct/addFood',
         icon: <IoIcons.IoMdAddCircleOutline />
+      },
+      {
+        title: 'Top Products',
+        path: '/addProduct/topProduct',
+        icon: <IoIcons.IoMdAddCircleOutline />
       }
+
     ]
   },
   {

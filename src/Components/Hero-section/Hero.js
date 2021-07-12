@@ -1,7 +1,7 @@
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import heroImg from '../../images/basket-full-vegetables.jpg'
+import heroImg from '../../images/basket-full-vegetables.png'
 import './Hero.css'
 
 const Hero = () => {
@@ -12,9 +12,9 @@ const Hero = () => {
                     <div className="col">
                         <h1><span className='h-top'>Super</span><br /><span className='h-mid'>Grocary</span><br /><span className='h-bottom'>Sale</span></h1>
                         <p className='mt-4 mb-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nam consequuntur odit ducimus laboriosam eligendi odio ipsa cum assumenda asperiores. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, iusto!</p>
-                        <button className='submitBtn'>Shop Now<FontAwesomeIcon icon={faArrowRight}/></button>
+                        <button className='submitBtn'>Shop Now <FontAwesomeIcon icon={faArrowRight}/></button>
                     </div>
-                    <div className="col text-center">
+                    <div className="col text-left">
                         <img src={heroImg} alt="" className=' heroImg' />
                     </div>
                 </div>
