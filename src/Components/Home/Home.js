@@ -9,13 +9,14 @@ import Product from '../Product/Product';
 import About from '../About/About'
 import Contact from '../Contact/Contact'
 import SliderReview from '../Testimonial/SliderReview/SliderReview';
+import Hero from '../Hero-section/Hero';
 
 
 
 const Home = () => {
     return (
         <div className="home font m-auto">
-         <Header/>
+        <Hero/>
          <HeaderContent/>
          <Category/>
          <Product/>

@@ -1,0 +1,87 @@
+.hero-content{
+    display: flex;
+    justify-content: space-between;
+}
+.h-top{
+    color: #638900;
+    font-size: 50px;
+    font-weight: 600;
+    font-family:Brush Script MT	;
+    text-transform: uppercase;
+}
+.h-mid{
+    font-size: 60px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.h-bottom{
+    color: #638900;
+    font-size: 65px;
+    font-weight: 900;
+    position: relative;
+    left: 180px;
+    font-family:Brush Script Std  ;
+    text-transform: uppercase;
+
+}
+.hero-section{
+    padding: 90px 10px;
+}
+.heroImg{
+    width: 600px;
+    position: relative;
+    bottom: 30px;
+    left:30px;
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  
+    .hero-content{
+        display: inline;
+    }
+    .heroImg{
+        width: 320px;
+        margin: 20px 0px;
+    }
+    .h-mid{
+        font-size: 50px;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+    .h-bottom{
+        color: #638900;
+        font-size: 65px;
+        font-weight: 900;
+        position: relative;
+        left: 140px;
+        font-family:Brush Script Std  ;
+        text-transform: uppercase;
+    
+    }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  
+    .hero-content{
+        display: inline;
+    }
+    .heroImg{
+        width: 300px;
+        margin: 20px 0px;
+    }
+    .h-mid{
+        font-size: 50px;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+    .h-bottom{
+        color: #638900;
+        font-size: 65px;
+        font-weight: 900;
+        position: relative;
+        left: 140px;
+        font-family:Brush Script Std  ;
+        text-transform: uppercase;
+    
+    }
+    
+    
+  }
