@@ -27,8 +27,7 @@
     bottom: 4px;
 }
 .navbar{
-    background-color: #FDD670;
-    margin: 0px;
+   margin: 0px;
     padding: 0px;
 }
 .input{
@@ -71,7 +70,7 @@
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-  
+/*   
     .logo{
         position: relative;
         left: 100px;
@@ -90,11 +89,12 @@
         position: relative;
         bottom: 20px;
     }
-  }
+  } */
+}
 
 @media (min-width: 481px) and (max-width: 767px) {
   
-    .logo{
+    /* .logo{
         position: relative;
         left: 150px;
     }
@@ -113,6 +113,6 @@
         bottom: 20px;
     }
 
-    
+     */
   }
   

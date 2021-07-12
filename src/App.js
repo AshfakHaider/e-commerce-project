@@ -15,7 +15,6 @@ import AddFashion from './Components/Dashboard/AddProduct/AddFashionPd';
 import AddFood from './Components/Dashboard/AddProduct/AddFoodPd';
 import AddGrocaryPd from './Components/Dashboard/AddProduct/AddGrocaryPd';
 import AllGrocaryProduct from './Components/Dashboard/AllProducts/Grocary/AllGrocaryProduct';
-import TestHome from './Components/TestHome/TestHome';
 import RiseLoader from "react-spinners/RiseLoader";
 import Dashboard from './Components/Dashboard/Dashboard/Dashboard';
 import Footer from './Components/Footer/Footer';
@@ -26,7 +25,8 @@ import AddReview from './Components/Dashboard/AddReview/AddReview';
 import SidebarTest from './Components/SidebarTest/SidebarTest';
 import CheckOut from './Components/CheckOut/CheckOut';
 import AllReview from './Components/Dashboard/AllReview/AllReview';
-
+import NavTop from './Components/Nav/NavTop';
+import Nav from './Components/Nav/Nav'
 
 export const UserContext = createContext();
 
@@ -69,7 +69,6 @@ function App() {
 
         <Switch>
           <Route path='/home'>
-            <Navbar />
             <Home />
             <Footer />
           </Route>
@@ -78,29 +77,36 @@ function App() {
             <Dashboard />
           </Route>
           <Route path='/login'>
-            <Navbar />
+            <NavTop/> 
+            <Nav />
             <Login />
             <Footer />
           </Route>
           <Route path='/product/:id'>
-            <Navbar />
+          <NavTop/>
+            <Nav />
             <SingleProduct />
             <Footer />
           </Route>
           <Route path='/checkOut'>
+          <NavTop/>
+          <Nav/>
             <CheckOut />
           </Route>
-          <Route exact path='/'>
-            <Navbar />
+          <Route exact path='/'>    
+            <NavTop/>
+            <Nav/>
             <Home></Home>
             <Footer />
             {/* <TestHome/> */}
           </Route>
+
           <Route path='/dashboard'>
             <Dashboard />
           </Route>
           <Route path='/allProducts/grocary'>
-            <Navbar />
+          <NavTop/>
+            <Nav />
             <AllGrocaryProduct />
             <Footer />
           </Route>
@@ -117,12 +123,14 @@ function App() {
             <AddFood />
           </Route>
           <Route path='/allProducts/fashion'>
-            <Navbar />
+          <NavTop/>
+            <Nav/>
             <FashionProduct />
             <Footer />
           </Route>
           <Route path='/allProducts/food'>
-            <Navbar />
+          <NavTop/>
+            <Nav />
             <Food />
             <Footer />
           </Route>
@@ -135,10 +143,10 @@ function App() {
             <AllReview/>
           </Route>
           <Route path="*">
-            <Navbar/>
+          <NavTop/>
+            <Nav/>
             <NotFound />
           </Route>
-
         </Switch>
       </Router>
     </UserContext.Provider>

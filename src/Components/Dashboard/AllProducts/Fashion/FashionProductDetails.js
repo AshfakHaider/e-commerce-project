@@ -37,25 +37,20 @@ const FashionProductDetails = ({ product }) => {
             .then(res => res.json())
             .then(data => {
                 console.log('deleted successfully');
-                refreshPage();
+                // refreshPage();
             })
     }
-    // function refreshPage() {
+
+
+    // const refreshPage = () => {
     //     window.location.reload();
     // }
-    const refreshPage = () => {
-        window.location.reload();
-    }
     const [modalIsOpen, setIsOpen] = React.useState(false);
 
     function openModal() {
         setIsOpen(true);
     }
 
-    // function afterOpenModal() {
-    //   // references are now sync'd and can be accessed.
-    //   subtitle.style.color = '#f00';
-    // }
 
     function closeModal() {
         setIsOpen(false);
@@ -66,8 +61,8 @@ const FashionProductDetails = ({ product }) => {
         fetch(`https://eco-shop-db.herokuapp.com/fashion/${id}`)
         .then(res=> res.json())
         .then(data=>{
-            //console.log(data)
-            setPdLoad(data);
+            console.log(data[0])
+            setPdLoad(data[0]);
         })
     }
     //console.log(pdload);
@@ -87,18 +82,29 @@ const FashionProductDetails = ({ product }) => {
             brand:brand,
             imageUrl: imgUrl
         };
-        fetch(`https://eco-shop-db.herokuapp.com/updateFashion/${id}`, {
-            method: 'PATCH',
+        console.log(updatedProduct)
+        console.log(`https://eco-shop-db.herokuapp.com/updateFashion/${id}`);
+        fetch(`http://localhost:5000/updateFashion/${id}`,{
+            method:'PATCH',
             headers:{
-                'content-type':'application/json'
+                'Content-type':'application/json'
             },
             body:JSON.stringify(updatedProduct)
         })
         .then(res=>res.json())
-        .then(data =>{
-            console.log(data,'updated success!!')
-            refreshPage();
-        })
+        .then(data=>console.log(data));
+        // fetch(`https://eco-shop-db.herokuapp.com/updateFashion/${id}`, {
+        //     method: 'PATCH',
+        //     headers:{
+        //         'content-type':'application/json'
+        //     },
+        //     body:JSON.stringify(updatedProduct)
+        // })
+        // .then(res=>res.json())
+        // .then(data =>{
+        //     console.log(data,'updated success!!')
+        //     refreshPage();
+        // })
     }
     
     const handleImgUpload = event => {

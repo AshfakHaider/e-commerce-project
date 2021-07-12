@@ -1,0 +1,119 @@
+.logoImg {
+    width: 250px;
+    height: 150px;
+}
+
+.navbar-toggler-icon {
+    color: black;
+}
+
+.icon {
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 5px;
+    color: black;
+    font-size: 20px;
+}
+.main-nav{
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    color: black;
+}
+
+.nav-items{
+    list-style: none;
+    display: flex;
+    margin-top: 10px;
+}
+.nav-items li{
+    list-style: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 0 15px;
+    color: rgb(25, 17, 11) ;
+    padding-top: 10px;
+}
+.nav-items h6{
+    color: rgb(25, 17, 11);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+.nav-items a:hover{
+    text-decoration: none;
+  
+}
+.searchBtn{
+    padding: 5px 20px;
+    background: #19110b;
+    color: white;
+    transition: ease-out 0.3s;
+    border: 1px solid #19110b;
+}
+.searchBtn:hover{
+    background-color: #EAE8E4;
+    color: black;
+}
+.search input{
+    background-color: #F6F5F3;
+}
+
+.nav {
+    margin: 0px;
+    padding: 0px;
+}
+.left{
+    color: #736359;
+}
+.right{
+    color: #C6B832;
+}
+.search{
+    margin-top: 15px;
+    width: 450px;
+    
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .nav-items{
+        display: inline;
+    }
+    .main-nav{
+        padding: 5px 10px;
+        display: inline;
+        position: relative;
+        bottom: 20px;
+    }
+    .search{
+        margin-top: 15px;
+        width: 300px;
+        margin-left: 18px;
+        
+    }
+    
+    
+    
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .nav-items{
+        display: inline;
+   
+    }
+    .main-nav{
+        padding: 5px 10px;
+        display: inline;
+        position: relative;
+        bottom: 20px;
+    }
+    .search{
+        margin-top: 15px;
+        width: 450px;
+        margin-left: 18px;
+    }
+}
