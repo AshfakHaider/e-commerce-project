@@ -13,7 +13,7 @@ const FashionProduct = () => {
     const [loading,setLoading]= useState(true);
     useEffect(() => {
         setLoading(true)
-        fetch('https://eco-shop-db.herokuapp.com/fashionProducts')
+        fetch('https://eco-shop-db.herokuapp.com/fashion')
             .then(res => res.json())
             .then(data => {
                 console.log(data)

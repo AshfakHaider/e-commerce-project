@@ -87,7 +87,7 @@ const FashionProductDetails = ({ product }) => {
             brand:brand,
             imageUrl: imgUrl
         };
-        fetch(`https://eco-shop-db.herokuapp.com/updateFood/${id}`, {
+        fetch(`https://localhost:5000/updateFood/${id}`, {
             method: 'PATCH',
             headers:{
                 'content-type':'application/json'

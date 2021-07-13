@@ -81,7 +81,7 @@ const AddFashionPd = () => {
                         <input type='text' name='brand' placeholder='Brand' id='brand' className='form-control' />
                         <br />
                         <h6 className='label'>Enter Product Category</h6>
-                        <input type='text' name='piece' placeholder='Category' id='category'  className='form-control'  />
+                        <input type='text' name='piece' placeholder='Category' id='category'  className='form-control' defaultValue="Fashion" />
                         <br />
                         <h6 className='label'>Enter Sub Category</h6>
                         <input type='text' name='piece' placeholder='Sub Category' id='subCategory' className='form-control' />
