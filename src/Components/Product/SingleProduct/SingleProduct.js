@@ -9,23 +9,12 @@ import SimilarProduct from './SimilarProduct';
 import Footer from '../../Footer/Footer';
 import { useCallback } from 'react';
 
-const SingleProduct = () =>{
+const SingleProduct = () => {
     const [count, setCount] = useState(1);
     const [similar, setSimilar] = useState([]);
 
     const { id } = useParams()
     const [productLoad, setProductLoad] = useState([]);
-    // const loadProduct = id => {
-    //     //console.log(id)
-    //     fetch(`https://eco-shop-db.herokuapp.com/product/${id}`)
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             //console.log(data)
-    //             setProductLoad(data);
-    //             loadSimilar()
-    //         })
-    // }
-    //loadProduct(id);
     const increase = () => {
 
         setCount(count + 1)
@@ -36,102 +25,34 @@ const SingleProduct = () =>{
             setCount(0)
         }
     }
-    // console.log(productLoad.category)
 
-
-    // JSON.stringify(s).replace(/\\"/g, '"')
-
-
+    const url = `https://eco-shop-db.herokuapp.com/search?query=${productLoad.category}`
     const loadSimilar = () => {
-        const pdCategory = productLoad.category
-        if (pdCategory === "Sugar") {
-            fetch('https://eco-shop-db.herokuapp.com/category/sugar')
-                .then(res => res.json())
-                .then(data => {
-                    // console.log(data);
-                    setSimilar(data);
-                })
-        }
-        if (pdCategory === "Hand Sanitizer") {
-            fetch('https://eco-shop-db.herokuapp.com/category/sanitizer')
-                .then(res => res.json())
-                .then(data => {
-                   // console.log(data);
-                    setSimilar(data);
-                })
-        }
-        if (pdCategory === "Disinfectant Spray") {
-            fetch('https://eco-shop-db.herokuapp.com/category/spray')
-                .then(res => res.json())
-                .then(data => {
-                  //  console.log(data);
-                    setSimilar(data);
-                })
-        }
-        if (pdCategory === "Hand Wash") {
-            fetch('https://eco-shop-db.herokuapp.com/category/wash')
-                .then(res => res.json())
-                .then(data => {
-                   // console.log(data);
-                    setSimilar(data);
-                })
-        }
-        if (pdCategory === "Baby Diaper") {
-            fetch('https://eco-shop-db.herokuapp.com/category/diaper')
-                .then(res => res.json())
-                .then(data => {
-                   // console.log(data);
-                    setSimilar(data);
-                })
-        }
-        if (pdCategory === "Body Spray") {
-            fetch('https://eco-shop-db.herokuapp.com/category/bodySpray')
-                .then(res => res.json())
-                .then(data => {
-                   // console.log(data);
-                    setSimilar(data);
-                })
-        }
-
+        fetch(url)
+            .then(res => res.json())
+            .then(data => {
+                setSimilar(data);
+                console.log(data)
+            })
     }
 
 
-    const refreshPage = () =>{
+    const refreshPage = () => {
         window.location.reload();
     }
 
-    //  useEffect(()=>{
-    //     fetch(`http://localhost:5000/productSimilar/${productLoad.category}`)
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             console.log(data);
-    //             setSimilar(data);
-    //         })
-    //
-    
 
-    
-    // useEffect(()=>{
-    //     const url = `http://localhost:5000/productSimilar/${productLoad.category}`
-    //     fetch(url)
-    //     .then(res=>res.json())
-    //     .then(data=>{
-    //         console.log(data)
-    //         setSimilar(data);
-    //     })
-    // },[])
-   
     useEffect(() => {
         fetch(`https://eco-shop-db.herokuapp.com/product/${id}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)
                 setProductLoad(data);
+
             })
-    },[])
+    }, [])
 
     loadSimilar();
-
 
 
     return (
@@ -161,15 +82,17 @@ const SingleProduct = () =>{
                     </div>
                 </div>
             </div>
-            <div className="similar mt-5 font">
+            <div className="similar container-fluid mt-5 font">
                 <h3>You may also like</h3>
-                <div className="pd">
-                    <div className="w-75 row m-auto">
-                        {
-                            similar.map(sm => <SimilarProduct similar={sm}></SimilarProduct>)
-                        }
-                    </div>
+                <div className="">
+                    <div className="pd">
+                        <div className="w-75 row m-auto ">
+                            {
+                                similar.map(sm => <SimilarProduct similar={sm}></SimilarProduct>)
+                            }
+                        </div>
 
+                    </div>
                 </div>
             </div>
         </div>

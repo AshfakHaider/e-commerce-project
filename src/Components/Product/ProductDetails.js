@@ -8,6 +8,7 @@ const ProductDetails = ({ product }) => {
     const history = useHistory();
     const handleProduct = (id) => {
         //console.log(id,name);
+        
         history.push(`/product/${id}`);
         refreshPage();    
         

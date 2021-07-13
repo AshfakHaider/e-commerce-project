@@ -104,10 +104,9 @@
     font-size: 35px;
     font-weight: 700;
     color: #212529;
-    position: relative;
-    left: 25px;
     border-bottom: 1px solid #eae8e4;
     padding: 10px 15px;
+    margin-left: 20px;
 }
 
 @media (min-width: 481px) and (max-width: 767px) {

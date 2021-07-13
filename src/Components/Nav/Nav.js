@@ -17,12 +17,14 @@ const Nav = () => {
 
     const history = useHistory()
     const onSubmit = () => {
-         const searchValue = document.getElementById('input').value;
-            history.push(`/searchPd/${searchValue}`)
-            refreshPage()
+
+        const searchValue = document.getElementById('input').value;
+
+         history.push(`/searchPd/${searchValue}`)
+        refreshPage()
 
     }
-    const refreshPage = () =>{
+    const refreshPage = () => {
         window.location.reload();
     }
 
@@ -57,6 +59,7 @@ const Nav = () => {
                     <div className="d-flex search-field ">
                         <input type="text" placeholder="Search Products" name="search" id="input" className='search-input form-control' />
                         <button className='searchBtn' type='submit'>Search</button>
+
                     </div>
                 </form>
             </div>
