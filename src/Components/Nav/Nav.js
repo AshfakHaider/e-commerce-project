@@ -5,10 +5,29 @@ import './Nav.css'
 import logo from '../../images/logo2.png'
 import { Link } from 'react-router-dom';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { useForm } from "react-hook-form";
+
 
 const Nav = () => {
     const [isNavCollapsed, setIsNavCollapsed] = useState(true);
     const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
+    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+
+
+    const onSubmit = ()=>{
+        const sc = document.getElementById('input').value;
+        const eventData = {
+           search:sc
+        }
+        fetch(`http://localhost:5000/searchPd/${sc}`)
+        .then(res=>res.json())
+        .then(data=>{
+            console.log(data);
+        })
+
+    }
+
+
     return (
         <div className='font  container-fluid main-nav'>
 
@@ -35,11 +54,13 @@ const Nav = () => {
                 
             </nav>
             <div className="search ">
+                    <form onSubmit={handleSubmit(onSubmit)} >
                     <div className="d-flex search-field  ">
-                        <input type="text" placeholder="Search Products" name="" id="" className='search-input form-control' />
-                        <button className='searchBtn'>Search</button>
-                      
-                    </div>
+
+                        <input type="text" placeholder="Search Products" name="search" id="input" className='search-input form-control' />
+                        <button className='searchBtn' type='submit'>Search</button>
+                        </div>
+                      </form>
                 </div>
         </div>
     );

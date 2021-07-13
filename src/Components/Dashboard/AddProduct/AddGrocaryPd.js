@@ -11,6 +11,7 @@ const AddProduct = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
 
     const [imgUrl, setImgUrl] = useState(null);
+    const [banner,setBanner] = useState(null)
 
     const onSubmit = data => {
         const name = document.getElementById('name').value;
@@ -18,14 +19,16 @@ const AddProduct = () => {
         const piece = document.getElementById('piece').value;
         const category = document.getElementById('category').value;
         const brand = document.getElementById('brand').value;
-
+        const sub = document.getElementById('subCategory').value
+        
         const eventData = {
             name: name,
             price: price,
             piece: piece,
             category: category,
             brand:brand,
-            imageUrl: imgUrl
+            subCategory:sub,
+            imageUrl: imgUrl,
         }
         //console.log(eventData);
         const url = `https://eco-shop-db.herokuapp.com/addProduct`;
@@ -58,6 +61,9 @@ const AddProduct = () => {
             })
     }
 
+
+
+
     const refreshPage = () =>{
         window.location.reload();
     }
@@ -83,6 +89,9 @@ const AddProduct = () => {
                         <br />
                         <h6 className='label'>Enter Product Category</h6>
                         <input type='text' name='piece' placeholder='Category' id='category' className='form-control' />
+                        <br />
+                        <h6 className='label'>Enter Sub Category</h6>
+                        <input type='text' name='piece' placeholder='Sub Category' id='subCategory' className='form-control' />
                         <br />
                         <h6 className='label'>Enter Product Picture</h6>
                         <input type="file" onChange={handleImgUpload} className='form-control'/>

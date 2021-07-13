@@ -16,13 +16,16 @@ const AddFashionPd = () => {
         const piece = document.getElementById('piece').value;
         const category = document.getElementById('category').value;
         const brand = document.getElementById('brand').value;
+        const sub = document.getElementById('subCategory').value;
+
 
         const eventData = {
             name: name,
             price: price,
             piece: piece,
             category: category,
-            brand:brand,
+            brand: brand,
+            subCategory: sub,
             imageUrl: imgUrl
         }
         //console.log(eventData);
@@ -37,7 +40,7 @@ const AddFashionPd = () => {
             .then(res => {
                 console.log('server side response', res)
                 refreshPage()
-               
+
             });
     };
 
@@ -49,14 +52,14 @@ const AddFashionPd = () => {
         axios.post('https://api.imgbb.com/1/upload', imageData)
             .then(function (response) {
                 setImgUrl(response.data.data.display_url)
-               
+
             })
             .catch(function (error) {
                 console.log(error)
             })
     }
 
-    const refreshPage = () =>{
+    const refreshPage = () => {
         window.location.reload();
     }
     return (
@@ -78,10 +81,13 @@ const AddFashionPd = () => {
                         <input type='text' name='brand' placeholder='Brand' id='brand' className='form-control' />
                         <br />
                         <h6 className='label'>Enter Product Category</h6>
-                        <input type='text' name='piece' placeholder='Category' id='category' className='form-control' />
+                        <input type='text' name='piece' placeholder='Category' id='category'  className='form-control'  />
+                        <br />
+                        <h6 className='label'>Enter Sub Category</h6>
+                        <input type='text' name='piece' placeholder='Sub Category' id='subCategory' className='form-control' />
                         <br />
                         <h6 className='label'>Enter Product Picture</h6>
-                        <input type="file" onChange={handleImgUpload} className='form-control'/>
+                        <input type="file" onChange={handleImgUpload} className='form-control' />
 
                         {errors.exampleRequired && <span>This field is required</span>}
                         <br />

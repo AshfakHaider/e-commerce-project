@@ -16,6 +16,7 @@ const AddFashionPd = () => {
         const piece = document.getElementById('piece').value;
         const category = document.getElementById('category').value;
         const brand = document.getElementById('brand').value;
+        const sub = document.getElementById('subCategory').value;
 
         const eventData = {
             name: name,
@@ -23,6 +24,7 @@ const AddFashionPd = () => {
             piece: piece,
             category: category,
             brand:brand,
+            subCategory:sub,
             imageUrl: imgUrl
         }
         //console.log(eventData);
@@ -80,6 +82,9 @@ const AddFashionPd = () => {
                         <br />
                         <h6 className='label'>Enter Product Category</h6>
                         <input type='text' name='piece' placeholder='Category' id='category' className='form-control' />
+                        <br />
+                        <h6 className='label'>Enter Sub Category</h6>
+                        <input type='text' name='piece' placeholder='Sub Category' id='subCategory' className='form-control' />
                         <br />
                         <h6 className='label'>Enter Product Picture</h6>
                         <input type="file" onChange={handleImgUpload} className='form-control'/>
