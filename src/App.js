@@ -28,6 +28,7 @@ import AllReview from './Components/Dashboard/AllReview/AllReview';
 import NavTop from './Components/Nav/NavTop';
 import Nav from './Components/Nav/Nav'
 import AddTopProduct from './Components/Dashboard/AddProduct/AddTopProduct';
+import Search from './Components/Search/Search';
 
 export const UserContext = createContext();
 
@@ -70,8 +71,16 @@ function App() {
 
         <Switch>
           <Route path='/home'>
+            <NavTop/>
+            <Nav/>
             <Home />
             <Footer />
+          </Route>
+          <Route path='/searchPd/:name'>
+            <NavTop/>
+            <Nav/>
+            <Search/>
+            <Footer/>
           </Route>
           <Route path='/dashboard'>
             <SidebarTest />
@@ -89,6 +98,7 @@ function App() {
             <SingleProduct />
             <Footer />
           </Route>
+  
           <Route path='/checkOut'>
           <NavTop/>
           <Nav/>

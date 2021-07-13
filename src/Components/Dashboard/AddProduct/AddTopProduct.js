@@ -25,7 +25,7 @@ const AddTopProduct = () => {
             imageUrl: imgUrl
         }
         //console.log(eventData);
-        const url = `http://localhost:5000/addTop`;
+        const url = `https://eco-shop-db.herokuapp.com/addTop`;
         fetch(url, {
             method: 'POST',
             headers: {

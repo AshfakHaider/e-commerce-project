@@ -3,9 +3,11 @@ import React from 'react';
 import { useState } from 'react';
 import './Nav.css'
 import logo from '../../images/logo2.png'
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { useForm } from "react-hook-form";
+import Search from '../Search/Search';
+
 
 
 const Nav = () => {
@@ -13,18 +15,15 @@ const Nav = () => {
     const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
 
+    const history = useHistory()
+    const onSubmit = () => {
+         const searchValue = document.getElementById('input').value;
+            history.push(`/searchPd/${searchValue}`)
+            refreshPage()
 
-    const onSubmit = ()=>{
-        const sc = document.getElementById('input').value;
-        const eventData = {
-           search:sc
-        }
-        fetch(`http://localhost:5000/searchPd/${sc}`)
-        .then(res=>res.json())
-        .then(data=>{
-            console.log(data);
-        })
-
+    }
+    const refreshPage = () =>{
+        window.location.reload();
     }
 
 
@@ -51,17 +50,16 @@ const Nav = () => {
                         <li><a href='/'><h6>Woman's Fashion</h6></a></li>
                     </ul>
                 </div>
-                
-            </nav>
-            <div className="search ">
-                    <form onSubmit={handleSubmit(onSubmit)} >
-                    <div className="d-flex search-field  ">
 
+            </nav>
+            <div className="search">
+                <form onSubmit={handleSubmit(onSubmit)} >
+                    <div className="d-flex search-field ">
                         <input type="text" placeholder="Search Products" name="search" id="input" className='search-input form-control' />
                         <button className='searchBtn' type='submit'>Search</button>
-                        </div>
-                      </form>
-                </div>
+                    </div>
+                </form>
+            </div>
         </div>
     );
 };

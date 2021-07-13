@@ -37,7 +37,7 @@ const Loding = () => {
                       repeat: "Infinity",
                       repeatType: "reverse",
                       ease: "anticipate",
-                      duration: 1, 
+                      duration: 0.3, 
                       delay: 0
                     }}
                 />
