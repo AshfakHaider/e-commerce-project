@@ -66,8 +66,8 @@ const FashionProductDetails = ({ product }) => {
         fetch(`https://eco-shop-db.herokuapp.com/food/${id}`)
         .then(res=> res.json())
         .then(data=>{
-            //console.log(data)
-            setPdLoad(data);
+            console.log(data)
+            setPdLoad(data[0]);
         })
     }
     //console.log(pdload);
