@@ -49,7 +49,6 @@ const Product = () => {
 
         <div className="productDiv">
             <div className="d-flex justify-content-center pd">
-                <Sidebar />
                 <div className="w-75 row">
                     {
                         product.slice(0, visible).map(pd => <ProductDetails

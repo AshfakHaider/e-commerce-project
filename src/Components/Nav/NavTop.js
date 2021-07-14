@@ -5,6 +5,7 @@ import { FaMapMarkedAlt } from 'react-icons/fa';
 import './NavTop.css'
 import CartContext from '../../Context/Cart/CartContext';
 import { useContext } from 'react';
+import { useState } from 'react';
 
 const NavTop = () => {
   const {cartItems, showHideCart } =  useContext(CartContext)

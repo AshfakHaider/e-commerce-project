@@ -16,7 +16,6 @@ import Cart from '../Cart/Cart'
 const Home = () => {
     return (
         <div className="home font m-auto">
-            <Cart/>
             <Hero />
             <HeaderContent />
             <Category />

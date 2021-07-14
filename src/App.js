@@ -29,6 +29,7 @@ import NavTop from './Components/Nav/NavTop';
 import Nav from './Components/Nav/Nav'
 import AddTopProduct from './Components/Dashboard/AddProduct/AddTopProduct';
 import Search from './Components/Search/Search';
+import Cart from './Components/Cart/Cart'
 
 export const UserContext = createContext();
 
@@ -67,7 +68,7 @@ function App() {
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
 
-
+      <Cart/>
 
         <Switch>
           <Route path='/home'>

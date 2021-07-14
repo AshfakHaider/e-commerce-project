@@ -1,6 +1,11 @@
+import { useState } from "react";
 import { SHOW_HIDE_CART, ADD_TO_CART, REMOVE_ITEM } from "../Types";
 
+
 const CartReducer = (state, action) => {
+
+
+
   switch (action.type) {
     case SHOW_HIDE_CART: {
       return {
@@ -12,6 +17,7 @@ const CartReducer = (state, action) => {
       return {
         ...state,
         cartItems: [...state.cartItems, action.payload],
+  
       };
     }
     case REMOVE_ITEM: {
