@@ -26,7 +26,7 @@ const Search = () => {
                 <div className="d-flex justify-content-center pd">
                     <div className="w-75 row">
                         {
-                            searchItem.map(items => <SearchDetails items={items} />)
+                            searchItem.map(product => <SearchDetails product={product} />)
                         }
                     </div>
                 </div>

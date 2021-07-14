@@ -16,13 +16,13 @@ const Nav = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
 
     const history = useHistory()
-    const onSubmit = () => {
 
+    const onSubmit = () => {
         const searchValue = document.getElementById('input').value;
 
-         history.push(`/searchPd/${searchValue}`)
-        refreshPage()
 
+         //history.push(`/searchPd/${searchValue}`)
+        window.location.assign(`/searchPd/${searchValue}`)
     }
     const refreshPage = () => {
         window.location.reload();

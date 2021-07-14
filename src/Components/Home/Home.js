@@ -10,12 +10,13 @@ import About from '../About/About'
 import Contact from '../Contact/Contact'
 import SliderReview from '../Testimonial/SliderReview/SliderReview';
 import Hero from '../Hero-section/Hero';
-
+import Cart from '../Cart/Cart'
 
 
 const Home = () => {
     return (
         <div className="home font m-auto">
+            <Cart/>
             <Hero />
             <HeaderContent />
             <Category />

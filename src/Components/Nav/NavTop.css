@@ -24,16 +24,7 @@
     padding: 10px 15px;
     border-bottom: 1px solid #eae8e4;
 }
-.cart-item{
-    width: 22px;
-    position: absolute;
-    top: 1%;
-    right: 8%;
-    border-radius: 50%;
-    text-align: center;
-    font-size:21px;
-    font-weight:600
-}
+
   
 
 @media (min-width: 481px) and (max-width: 767px) {

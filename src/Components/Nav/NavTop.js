@@ -7,7 +7,7 @@ import CartContext from '../../Context/Cart/CartContext';
 import { useContext } from 'react';
 
 const NavTop = () => {
-  const {cartItems} =  useContext(CartContext)
+  const {cartItems, showHideCart } =  useContext(CartContext)
   return (
     <div className="navTop divider font container-fluid">
       <div className="d-flex justify-content-lg-between">
@@ -24,7 +24,7 @@ const NavTop = () => {
         </div>
         <div className="nav-top-right">
           <div className="d-flex">
-             <FontAwesomeIcon icon={faShoppingCart} className='nav-icon me-md-3'/>
+             <FontAwesomeIcon icon={faShoppingCart} className='nav-icon me-md-3' onClick={showHideCart}/>
              {
               cartItems.length> 0 && <span className='cart-item'>{cartItems.length}</span>
              }

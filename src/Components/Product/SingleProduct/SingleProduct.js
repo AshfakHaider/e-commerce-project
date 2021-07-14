@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './SingleProduct.css';
@@ -8,13 +8,15 @@ import Navbar from '../../Navbar/Navbar'
 import SimilarProduct from './SimilarProduct';
 import Footer from '../../Footer/Footer';
 import { useCallback } from 'react';
+import CartContext from '../../../Context/Cart/CartContext';
 
 const SingleProduct = () => {
+    const{addToCart} = useContext(CartContext)
     const [count, setCount] = useState(1);
     const [similar, setSimilar] = useState([]);
 
     const { id } = useParams()
-    const [productLoad, setProductLoad] = useState([]);
+    const [product, setProductLoad] = useState([]);
     const increase = () => {
 
         setCount(count + 1)
@@ -26,7 +28,7 @@ const SingleProduct = () => {
         }
     }
 
-    const url = `https://eco-shop-db.herokuapp.com/search?query=${productLoad.category}`
+    const url = `https://eco-shop-db.herokuapp.com/search?query=${product.category}`
     const loadSimilar = () => {
         fetch(url)
             .then(res => res.json())
@@ -62,19 +64,19 @@ const SingleProduct = () => {
                 <div className="">
                     <div className="sp">
                         <div className="col-md-4 singlePdImg">
-                            <img src={productLoad.imageUrl} alt="" />
+                            <img src={product.imageUrl} alt="" />
                         </div>
                         <div className="col-md-5 single-product-info">
                             <h1>
-                                {productLoad.name}
+                                {product.name}
                             </h1>
-                            <p className='mt-3 mb-2 sp-brand'>{productLoad.brand}</p>
-                            <p className=' sp-category'>Category:{productLoad.category}</p>
-                            <h6 className='single-pd-price'>Price:{productLoad.price} taka</h6>
+                            <p className='mt-3 mb-2 sp-brand'>{product.brand}</p>
+                            <p className=' sp-category'>Category:{product.category}</p>
+                            <h6 className='single-pd-price'>Price:{product.price} taka</h6>
                             <div className="count text-dark">
                                 <p>Qunatity:<FontAwesomeIcon icon={faMinus} onClick={decrease} className='minus ms-2' /> <input type="text" value={count} style={{ width: '50px', border: '1px solid #80808078', borderRadius: '3px', textAlign: 'center' }} /> <FontAwesomeIcon icon={faPlus} onClick={increase} className='plus' /> </p>
                             </div>
-                            <button className='shopBtnSp mt-4 '>
+                            <button className='shopBtnSp mt-4 ' onClick={()=>addToCart(product)} >
                                 Add To Cart
                             </button>
 
@@ -88,7 +90,7 @@ const SingleProduct = () => {
                     <div className="pd">
                         <div className="w-75 row m-auto ">
                             {
-                                similar.map(sm => <SimilarProduct similar={sm}></SimilarProduct>)
+                                similar.map(sm => <SimilarProduct product={sm}></SimilarProduct>)
                             }
                         </div>
 

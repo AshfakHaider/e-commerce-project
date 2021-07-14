@@ -7,13 +7,13 @@ import CartContext from '../../Context/Cart/CartContext'
 
 const ProductDetails = ({ product  }) => {
     const {addToCart} = useContext(CartContext)
-    const history = useHistory();
     const handleProduct = (id) => {
         //console.log(id,name);
         
-        history.push(`/product/${id}`);
-        refreshPage();    
-        
+        //history.push(`/product/${id}`);
+        //refreshPage();
+        window.location.assign(`/product/${id}`)
+      //  console.log('clicked')
     }
     const refreshPage = () =>{
         window.location.reload();
@@ -22,11 +22,11 @@ const ProductDetails = ({ product  }) => {
     return (
         <div className='col-md-3 col-sm-6 col-xs-12 justify-content-center'>
             <div className=" pdCard">
-                <div className="pdImg">
-                    <img src={imageUrl} alt="" className='w-100' />
+                <div className="pdImg" onClick={()=>handleProduct(_id)}  >
+                    <img src={imageUrl}  alt="" className='w-100' />
                 </div>
-                <div className="pd-info">
-                    <h6>{name}</h6>
+                <div className="pd-info" >
+                    <h6 onClick={()=>handleProduct(_id)} >{name}</h6>
                     <span>{piece} pcs</span>
                     <div className="d-flex justify-content-lg-between pd-price">
                         <div className="price">
@@ -38,7 +38,6 @@ const ProductDetails = ({ product  }) => {
                     </div>
                 </div>
                 <div className="overlay-text">
-                    <h2>Add To bag</h2>
                 </div>
             </div>
 
