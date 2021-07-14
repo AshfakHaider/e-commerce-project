@@ -1,10 +1,13 @@
-import { faGlobe, faHeart,  faMapMarkerAlt, faQuestionCircle,  faUser } from '@fortawesome/free-solid-svg-icons';
+import { faGlobe, faHeart,  faMapMarkerAlt, faQuestionCircle,  faShoppingCart,  faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { FaMapMarkedAlt } from 'react-icons/fa';
 import './NavTop.css'
+import CartContext from '../../Context/Cart/CartContext';
+import { useContext } from 'react';
 
 const NavTop = () => {
+  const {cartItems} =  useContext(CartContext)
   return (
     <div className="navTop divider font container-fluid">
       <div className="d-flex justify-content-lg-between">
@@ -21,7 +24,10 @@ const NavTop = () => {
         </div>
         <div className="nav-top-right">
           <div className="d-flex">
-             <FontAwesomeIcon icon={faHeart} className='nav-icon me-md-3'/>
+             <FontAwesomeIcon icon={faShoppingCart} className='nav-icon me-md-3'/>
+             {
+              cartItems.length> 0 && <span className='cart-item'>{cartItems.length}</span>
+             }
              <FontAwesomeIcon icon={faMapMarkerAlt} className='nav-icon ms-md-3 me-md-3'/>
              <FontAwesomeIcon icon={faUser} className='nav-icon ms-md-3 me-md-3'/>
           </div>

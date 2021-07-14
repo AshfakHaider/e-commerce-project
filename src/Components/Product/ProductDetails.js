@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './ProductDetails.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { useHistory } from 'react-router-dom';
+import CartContext from '../../Context/Cart/CartContext'
 
-const ProductDetails = ({ product }) => {
+const ProductDetails = ({ product  }) => {
+    const {addToCart} = useContext(CartContext)
     const history = useHistory();
     const handleProduct = (id) => {
         //console.log(id,name);
@@ -23,7 +25,7 @@ const ProductDetails = ({ product }) => {
                 <div className="pdImg">
                     <img src={imageUrl} alt="" className='w-100' />
                 </div>
-                <div className="pd-info" onClick={()=>handleProduct(_id)}>
+                <div className="pd-info">
                     <h6>{name}</h6>
                     <span>{piece} pcs</span>
                     <div className="d-flex justify-content-lg-between pd-price">
@@ -31,7 +33,7 @@ const ProductDetails = ({ product }) => {
                             <h6>{price} Tk</h6>
                         </div>
                         <div className="cart d-flex">
-                            <button className='cartBtn'> <FontAwesomeIcon icon={faShoppingCart} className='cartIcon' /> Cart</button>
+                            <button className='cartBtn' onClick={()=>addToCart(product)}> <FontAwesomeIcon icon={faShoppingCart} className='cartIcon' /> Cart</button>
                         </div>
                     </div>
                 </div>

@@ -39,7 +39,7 @@ function App() {
     setLoad(true);
     setTimeout(() => {
       setLoad(false);
-    }, 2000)
+    }, 1000)
   }, [])
 
   const [loggedInUser, setLoggedInUser] = useState(useState({

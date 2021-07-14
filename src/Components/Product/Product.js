@@ -10,7 +10,9 @@ import Loading from '../Loading/Loading'
 const Product = () => {
     const [product, setProduct] = useState([]);
     const [visible, setVisible] = useState(12);
-    const [loading, setLoading]  = useState(true)   
+    const [loading, setLoading] = useState(true)
+
+
 
     useEffect(() => {
         setLoading(true);
@@ -27,13 +29,13 @@ const Product = () => {
     }
     if (loading) {
         return (
-          <div>
-            <Loading />
-          </div>
+            <div>
+                <Loading />
+            </div>
         )
-      }
-    
-  
+    }
+
+
     return (
         // <div className='product'>
         //     <div className="">
@@ -50,7 +52,9 @@ const Product = () => {
                 <Sidebar />
                 <div className="w-75 row">
                     {
-                        product.slice(0, visible).map(pd => <ProductDetails key={pd.id} product={pd} />)
+                        product.slice(0, visible).map(pd => <ProductDetails
+                            key={pd.id} product={pd}
+                        />)
                     }
 
                 </div>
