@@ -21,7 +21,7 @@ const Home = () => {
             <Category />
             <Product />
             <Tutorial />
-            <SliderReview />
+            {/* <SliderReview /> */}
             {/* <Testimonial/> */}
             <About />
             <Contact />

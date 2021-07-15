@@ -12,7 +12,8 @@ const Cart = () => {
   const { showCart, cartItems, showHideCart } = useContext(CartContext);
   let opts = { format: "%s%v", symbol: "€" };
   
-    localStorage.setItem('cartItem',JSON.stringify(cartItems))
+
+
   
  
   return (

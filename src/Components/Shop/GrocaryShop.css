@@ -1,0 +1,34 @@
+.banner-grocary{
+    background: url(../../images/banner_grocary.jpg);
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+}
+.banner-content h1{
+    font-size: 65px;
+    font-weight: 900;
+    color: #000;
+    padding-top: 150px;
+
+}
+.banner-food{
+    background-size:cover;
+    background: url(../../images/food_banner.jpg);
+    width: 100%;
+    background-repeat: no-repeat;
+    height: 400px;
+}
+.banner-content-food  h1{
+    font-size: 65px;
+    font-weight: 900;
+    color: #fff;
+    padding-top: 150px;
+}
+.banner-fashion{
+    background:url(../../images/fashion_banner.jpg);
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+    height: 400px;
+}

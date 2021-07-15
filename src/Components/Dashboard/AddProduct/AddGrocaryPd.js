@@ -20,6 +20,7 @@ const AddProduct = () => {
         const category = document.getElementById('category').value;
         const brand = document.getElementById('brand').value;
         const sub = document.getElementById('subCategory').value
+        // const img = document.getElementById('image').value;
         
         const eventData = {
             name: name,
@@ -95,7 +96,7 @@ const AddProduct = () => {
                         <br />
                         <h6 className='label'>Enter Product Picture</h6>
                         <input type="file" onChange={handleImgUpload} className='form-control'/>
-
+                        {/* <input type="text" name="iamge" id="image" className='form-control' /> */}
                         {errors.exampleRequired && <span>This field is required</span>}
                         <br />
                         <div>

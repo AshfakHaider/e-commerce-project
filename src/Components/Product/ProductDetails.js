@@ -7,6 +7,12 @@ import CartContext from '../../Context/Cart/CartContext'
 
 const ProductDetails = ({ product  }) => {
     const {addToCart} = useContext(CartContext)
+
+
+
+
+
+
     const handleProduct = (id) => {
         //console.log(id,name);
         
@@ -14,6 +20,7 @@ const ProductDetails = ({ product  }) => {
         //refreshPage();
         window.location.assign(`/product/${id}`)
       //  console.log('clicked')
+      
     }
     const refreshPage = () =>{
         window.location.reload();
@@ -33,7 +40,7 @@ const ProductDetails = ({ product  }) => {
                             <h6>{price} Tk</h6>
                         </div>
                         <div className="cart d-flex">
-                            <button className='cartBtn' onClick={()=>addToCart(product)}> <FontAwesomeIcon icon={faShoppingCart} className='cartIcon' /> Cart</button>
+                            <button className='cartBtn' onClick={()=>addToCart(product)} > <FontAwesomeIcon icon={faShoppingCart} className='cartIcon' /> Cart</button>
                         </div>
                     </div>
                 </div>

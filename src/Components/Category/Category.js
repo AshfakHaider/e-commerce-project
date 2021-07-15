@@ -7,7 +7,7 @@ import './Category.css'
 const Category = () => {
     const [categories, setCategories] = useState([]);
     useEffect(() => {
-        fetch('https://mocki.io/v1/33c996d0-8a43-4371-8687-82ec45c52dcb')
+        fetch('https://mocki.io/v1/a53c58d9-1852-43d2-99b8-bda5354faa0a')
             .then(res => res.json())
             .then(data => {
                 console.log(data)

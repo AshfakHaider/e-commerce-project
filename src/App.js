@@ -30,6 +30,9 @@ import Nav from './Components/Nav/Nav'
 import AddTopProduct from './Components/Dashboard/AddProduct/AddTopProduct';
 import Search from './Components/Search/Search';
 import Cart from './Components/Cart/Cart'
+import FoodShop from './Components/Shop/FoodShop';
+import FashionShop from './Components/Shop/FashionShop';
+import GrocariesShop from './Components/Shop/GrocariesShop';
 
 export const UserContext = createContext();
 
@@ -71,6 +74,21 @@ function App() {
       <Cart/>
 
         <Switch>
+          <Route path='/shop/Grocaries'>
+            <NavTop/>
+            <Nav></Nav>
+            <GrocariesShop/>
+          </Route>
+          <Route path='/shop/Food'>
+            <NavTop/>
+            <Nav></Nav>
+            <FoodShop/>
+          </Route>
+          <Route path='/shop/Fashion'>
+            <NavTop/>
+          <Nav/>
+          <FashionShop/>
+          </Route>
           <Route path='/home'>
             <NavTop/>
             <Nav/>
