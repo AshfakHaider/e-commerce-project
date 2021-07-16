@@ -1,66 +1,54 @@
-import { useContext, useEffect, useState } from "react";
-import "./Cart.css";
-import formatCurrency from "format-currency";
-import CartItem from "./CartItem";
-import CartContext from '../../Context/Cart/CartContext'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { faTimesCircle } from "@fortawesome/free-regular-svg-icons";
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import {CartContext} from '../../Context/Cart/CartContext';
+import CartItems from './CartItems';
+import { formatNumber } from './utils';
 
 const Cart = () => {
 
-  const { showCart, cartItems, showHideCart } = useContext(CartContext);
-  let opts = { format: "%s%v", symbol: "€" };
-  
+    const { total, cartItems, itemCount, clearCart } = useContext(CartContext);
+    
+    return ( 
+        <div title="Cart" description="This is the Cart page" >
+            <div >
+                <div className="text-center mt-5">
+                    <h1>Cart</h1>
+                    <p>This is the Cart Page.</p>
+                </div>
 
+                <div className="row no-gutters justify-content-center">
+                    <div className="col-sm-9 p-3">
+                        {
+                            cartItems.length > 0 ?
+                            <CartItems/> :
+                            <div className="p-3 text-center text-muted">
+                                Your cart is empty
+                            </div>
+                        }
+                        
+                    </div>
+                    {
+                        cartItems.length > 0 && 
+                        <div className="col-sm-3 p-3">
+                            <div className="card card-body">
+                                <p className="mb-1">Total Items</p>
+                                <h4 className=" mb-3 txt-right">{itemCount}</h4>
+                                <p className="mb-1">Total Payment</p>
+                                <h3 className="m-0 txt-right">{ formatNumber(total)}</h3>
+                                <hr className="my-4"/>
+                                <div className="text-center">
+                                    <button type="button" className="btn btn-primary mb-2">CHECKOUT</button>
+                                    <button type="button" className="btn btn-outlineprimary btn-sm" onClick={clearCart}>CLEAR</button>
+                                </div>
 
-  
- 
-  return (
-    <>
-      {showCart && (
-        <div className='cart__wrapper font p-4'>
-          <div style={{ textAlign: "right" }}>
-            <FontAwesomeIcon icon={faTimesCircle} onClick={showHideCart} style={{ color: 'red', cursor: 'pointer', fontSize: '25px' }} />
-          </div>
-          <div className='cart__innerWrapper'>
-            {cartItems.length === 0 ? (
-              <h4 className='mt-2 mb-3'>Your Shopping Bag is Empty</h4>
-            ) : (
-              <div>
-                <h3 className="mb-3">
-                  Your Shopping Bag
-                </h3>
-                <ul>
-                  {cartItems.map((item) => (
-                    <CartItem key={item._id} item={item} />
-                  ))}
-                </ul>
-              </div>
-
-            )}
-          </div>
-          <div className='Cart__cartTotal'>
-
-            <div>Grand Total</div>
-            <div></div>
-            <div style={{ marginLeft: 5 }}>
-              {formatCurrency(
-                cartItems.reduce((amount, item) => parseFloat(item.price) + amount, 0)
-              )} Tk
+                            </div>
+                        </div>
+                    }
+                    
+                </div>
             </div>
-          </div>
-          <div>
-            {
-              cartItems.length>0?<button className="submitBtn_cart">Proceed To Check Out <FontAwesomeIcon icon={faArrowRight} className='ms-2 mt-2' /></button>: <h6 className='text-danger mt-3'>Don't Get The Product You Want? Let's Make A Search</h6>
-            }
-
-          </div>
-
         </div>
-      )}
-    </>
-  );
-};
-
+     );
+}
+ 
 export default Cart;

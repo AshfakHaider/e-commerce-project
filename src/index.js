@@ -4,13 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import CartState from './Context/Cart/CartState'
+import CartContextProvider from './Context/Cart/CartContext'
+
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <CartState>
+    <CartContextProvider>
       <App />
-    </CartState>
+    </CartContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

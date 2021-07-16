@@ -3,10 +3,10 @@ import './SimilarProduct.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { useHistory } from 'react-router-dom';
-import CartContext from '../../../Context/Cart/CartContext'
+import {CartContext} from '../../../Context/Cart/CartContext'
 
 const SimilarProduct =({ product }) => {
-    const {addToCart} = useContext(CartContext)
+    const {addProduct} = useContext(CartContext)
 
     const { _id, name, imageUrl, piece, price } = product;
     const history = useHistory();
@@ -33,7 +33,7 @@ const SimilarProduct =({ product }) => {
                             <h6>{price} Tk</h6>
                         </div>
                         <div className="cart d-flex">
-                            <button className='cartBtn' onClick={()=> addToCart(product)}> <FontAwesomeIcon icon={faShoppingCart} className='cartIcon' /> Cart</button>
+                            <button className='cartBtn' onClick={()=> addProduct(product)}> <FontAwesomeIcon icon={faShoppingCart} className='cartIcon' /> Cart</button>
                         </div>
                     </div>
                 </div>

@@ -8,10 +8,10 @@ import Navbar from '../../Navbar/Navbar'
 import SimilarProduct from './SimilarProduct';
 import Footer from '../../Footer/Footer';
 import { useCallback } from 'react';
-import CartContext from '../../../Context/Cart/CartContext';
+import {CartContext} from '../../../Context/Cart/CartContext';
 
 const SingleProduct = () => {
-    const{addToCart} = useContext(CartContext)
+    const{addProduct} = useContext(CartContext)
     const [count, setCount] = useState(1);
     const [similar, setSimilar] = useState([]);
 
@@ -76,7 +76,7 @@ const SingleProduct = () => {
                             <div className="count text-dark">
                                 <p>Qunatity:<FontAwesomeIcon icon={faMinus} onClick={decrease} className='minus ms-2' /> <input type="text" value={count} style={{ width: '50px', border: '1px solid #80808078', borderRadius: '3px', textAlign: 'center' }} /> <FontAwesomeIcon icon={faPlus} onClick={increase} className='plus' /> </p>
                             </div>
-                            <button className='shopBtnSp mt-4 ' onClick={()=>addToCart(product)} >
+                            <button className='shopBtnSp mt-4 ' onClick={()=>addProduct(product)} >
                                 Add To Cart
                             </button>
 

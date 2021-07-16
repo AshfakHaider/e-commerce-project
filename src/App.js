@@ -70,9 +70,6 @@ function App() {
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
-
-      <Cart/>
-
         <Switch>
           <Route path='/shop/Grocaries'>
             <NavTop/>
@@ -130,7 +127,11 @@ function App() {
             <Footer />
             {/* <TestHome/> */}
           </Route>
-
+          <Route path='/cart'>
+            <NavTop/>
+            <Nav/>
+            <Cart />
+          </Route>
           <Route path='/dashboard'>
             <Dashboard />
           </Route>

@@ -6,7 +6,7 @@ import CartContext from '../../Context/Cart/CartContext';
 const FoodDetails = ({product}) => {
     const { _id, name, imageUrl, piece, price } = product;
  
-    const { addToCart } = useContext(CartContext)
+    const { addProduct} = useContext(CartContext)
 
 
     const handleProduct = (id) => {
@@ -32,7 +32,7 @@ const FoodDetails = ({product}) => {
                             <h6>{price} Tk</h6>
                         </div>
                         <div className="cart d-flex">
-                            <button className='cartBtn' onClick={() => addToCart(product)} > <FontAwesomeIcon icon={faShoppingCart} className='cartIcon' /> Cart</button>
+                            <button className='cartBtn' onClick={() => addProduct(product)} > <FontAwesomeIcon icon={faShoppingCart} className='cartIcon' /> Cart</button>
                         </div>
                     </div>
                 </div>
