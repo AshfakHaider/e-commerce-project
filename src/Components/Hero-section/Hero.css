@@ -26,6 +26,7 @@
 }
 .hero-section{
     padding: 90px 10px;
+    margin-top: 60px;
 }
 .heroImg{
     width: 600px;
@@ -33,8 +34,16 @@
     bottom: 30px;
     left:30px;
 }
+.search{
+    width: 500px;
+}
+
 @media (min-width: 320px) and (max-width: 480px) {
-  
+    .search{
+        margin-top: 15px;
+        width: 300px;
+        
+    }
     .hero-content{
         display: inline;
     }
@@ -60,7 +69,11 @@
     }
 }
 @media (min-width: 481px) and (max-width: 767px) {
-  
+    .search{
+        margin-top: 15px;
+        width: 450px;
+        margin-left: 18px;
+    }
     .hero-content{
         display: inline;
     }

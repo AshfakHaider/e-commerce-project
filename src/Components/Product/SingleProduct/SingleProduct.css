@@ -108,6 +108,9 @@
     padding: 10px 15px;
     margin-left: 20px;
 }
+.singleProductPage{
+    margin-top: 150px;
+}
 
 @media (min-width: 481px) and (max-width: 767px) {
     /* CSS */

@@ -72,71 +72,59 @@ function App() {
       <Router>
         <Switch>
           <Route path='/shop/Grocaries'>
-            <NavTop/>
             <Nav></Nav>
-            <GrocariesShop/>
+            <GrocariesShop />
           </Route>
           <Route path='/shop/Food'>
-            <NavTop/>
             <Nav></Nav>
-            <FoodShop/>
+            <FoodShop />
           </Route>
           <Route path='/shop/Fashion'>
-            <NavTop/>
-          <Nav/>
-          <FashionShop/>
+            <Nav />
+            <FashionShop />
           </Route>
           <Route path='/home'>
-            <NavTop/>
-            <Nav/>
+            <Nav />
             <Home />
             <Footer />
           </Route>
           <Route path='/searchPd/:name'>
-            <NavTop/>
-            <Nav/>
-            <Search/>
-            <Footer/>
+            <Nav />
+            <Search />
+            <Footer />
           </Route>
           <Route path='/dashboard'>
             <SidebarTest />
             <Dashboard />
           </Route>
           <Route path='/login'>
-            <NavTop/> 
             <Nav />
             <Login />
             <Footer />
           </Route>
           <Route path='/product/:id'>
-          <NavTop/>
             <Nav />
             <SingleProduct />
             <Footer />
           </Route>
-  
           <Route path='/checkOut'>
-          <NavTop/>
-          <Nav/>
+            <Nav />
             <CheckOut />
           </Route>
-          <Route exact path='/'>    
-            <NavTop/>
-            <Nav/>
+          <Route exact path='/'>
+            <Nav />
             <Home></Home>
             <Footer />
             {/* <TestHome/> */}
           </Route>
           <Route path='/cart'>
-            <NavTop/>
-            <Nav/>
+            <Nav />
             <Cart />
           </Route>
           <Route path='/dashboard'>
             <Dashboard />
           </Route>
           <Route path='/allProducts/grocary'>
-          <NavTop/>
             <Nav />
             <AllGrocaryProduct />
             <Footer />
@@ -157,30 +145,28 @@ function App() {
             <SidebarTest />
             <AddTopProduct />
           </Route>
-
           <Route path='/allProducts/fashion'>
-          <NavTop/>
-            <Nav/>
+            <Nav />
             <FashionProduct />
             <Footer />
           </Route>
           <Route path='/allProducts/food'>
-          <NavTop/>
+
             <Nav />
             <Food />
             <Footer />
           </Route>
           <Route path='/addReview'>
-            <SidebarTest/>
+            <SidebarTest />
             <AddReview />
           </Route>
           <Route path='/allReview'>
-            <SidebarTest/>
-            <AllReview/>
+            <SidebarTest />
+            <AllReview />
           </Route>
           <Route path="*">
-          <NavTop/>
-            <Nav/>
+
+            <Nav />
             <NotFound />
           </Route>
         </Switch>

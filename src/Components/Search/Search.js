@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import SearchDetails from './SearchDetails';
+import './Search.css'
 
 const Search = () => {
     const { name } = useParams();
@@ -20,7 +21,7 @@ const Search = () => {
 
 
     return (
-        <div className="searchResult font mt-5 mb-5">
+        <div className="searchResult font ">
             <div className="text-center text-danger"><h3>Search Results For {name}</h3></div>
             <div className="container-fluid">
                 <div className="d-flex justify-content-center pd">

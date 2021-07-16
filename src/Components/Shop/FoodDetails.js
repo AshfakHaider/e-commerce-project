@@ -1,7 +1,7 @@
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext } from 'react';
-import CartContext from '../../Context/Cart/CartContext';
+import {CartContext} from '../../Context/Cart/CartContext';
 
 const FoodDetails = ({product}) => {
     const { _id, name, imageUrl, piece, price } = product;

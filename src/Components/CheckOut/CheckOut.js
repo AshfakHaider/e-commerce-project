@@ -12,7 +12,7 @@ const CheckOut = () => {
 
 
     return (
-        <div className="checkout container-fluid mt-3 font">
+        <div className="checkout container-fluid font">
             <h3 className='mb-3'>Checkout & Confirm Your Order </h3>
             <h6 className='coupon text-white'>Have a coupon?<a href="#" className='text-white'> Click Here to check if you have any!!!</a></h6>
             <div className="billing">
@@ -20,8 +20,9 @@ const CheckOut = () => {
                 <div className="line"></div>
                 <div className="checkOutContent m-auto">
                     <div className="col-md-7">
-                        <form onSubmit={handleSubmit(onSubmit)} >
-                            <div className="nameDiv">
+                        <form onSubmit={handleSubmit(onSubmit)}  >
+                         <div>
+                         <div className="nameDiv">
                                 <div className="col-md-6 col-sm-8  col-xs-12">
                                     <h6 className='label mt-md-0 mt-3'>Enter Your First Name</h6>
                                     <input type="text" name="first name" placeholder='Enter First Name' id='firstName' className='form-control' required />
@@ -61,8 +62,10 @@ const CheckOut = () => {
 
                                 {errors.exampleRequired && <span>This field is required</span>}
                                 <br />
+                         </div>
+                             
                                 <div>
-                                    <button type='submit' className='submitBtn'>Submit</button>
+                                    <button type='submit' className='submitCheckOutBtn text-center text-bold'>Place Your Order</button>
                                 </div>
                             </div>
                         </form>
@@ -111,7 +114,7 @@ const CheckOut = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="submitBtn text-center text-bold mt-5" style={{cursor:'pointer'}}>Place Your Order</div>
+                        
                     </div>
                 </div>
             </div>

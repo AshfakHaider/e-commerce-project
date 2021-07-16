@@ -14,10 +14,25 @@
     color: black;
     font-size: 20px;
 }
-.main-nav{
+
+.logo-text {
+    position: relative;
+    top: 9px;
+    left: 25px;
+}
+
+.main-nav {
     padding: 5px 10px;
-    display: flex;
+    display: block;
     justify-content: space-between;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    margin-bottom: 50px;
+
 }
 
 .navbar-toggler-icon {
@@ -25,41 +40,50 @@
     color: black;
 }
 
-.nav-items{
+.nav-items {
     list-style: none;
     display: flex;
     margin-top: 10px;
 }
-.nav-items li{
+
+.nav-items li {
     list-style: none;
     text-decoration: none;
     text-transform: uppercase;
     margin: 0 15px;
-    color: rgb(25, 17, 11) ;
-    padding-top: 10px;
+    color: rgb(25, 17, 11);
 }
-.nav-items h6{
+
+.navbar-collapse {
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.nav-items h6 {
     color: rgb(25, 17, 11);
     text-decoration: none;
     font-size: 14px;
     font-weight: 500;
 }
-.nav-items a:hover{
+
+.nav-items a:hover {
     text-decoration: none;
-  
 }
-.searchBtn{
+
+.searchBtn {
     padding: 5px 20px;
     background: #19110b;
     color: white;
     transition: ease-out 0.3s;
     border: 1px solid #19110b;
 }
-.searchBtn:hover{
+
+.searchBtn:hover {
     background-color: #EAE8E4;
     color: black;
 }
-.search input{
+
+.search input {
     background-color: #F6F5F3;
 }
 
@@ -67,53 +91,175 @@
     margin: 0px;
     padding: 0px;
 }
-.left{
+
+.left {
     color: #736359;
 }
-.right{
+
+.right {
     color: #C6B832;
 }
-.search{
-    margin-top: 15px;
-    width: 450px;
-    
+
+.custom-icon-mobile {
+    display: none;
+}
+
+.custom-icon-desktop {
+    margin: 0px 15px;
+    cursor: pointer;
+    color: black;
+}
+
+.count {
+    background-color: red;
+    position: relative;
+    left: 50px;
+    bottom: 10px;
+    padding: 0px 5px;
+    border-radius: 50%;
+    color: black;
+}
+
+.count-mobile {
+    display: none;
+}
+
+.divider {
+    padding: 10px 15px;
+}
+
+.navbar {
+    background-color: white;
+}
+
+.custom-icon-mobile-cart {
+    display: none;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-    .nav-items{
+    
+.logo-text {
+    position: relative;
+}
+
+    .nav-items {
         display: inline;
     }
-    .main-nav{
+    .main-nav {
         padding: 5px 10px;
         display: inline;
         position: relative;
         bottom: 20px;
-    }
-    .search{
-        margin-top: 15px;
-        width: 300px;
-        margin-left: 18px;
         
     }
-    
-    
-    
+    .custom-icon-desktop {
+        display: none;
+    }
+    .custom-icon-mobile {
+        display: block;
+        color: #000;
+    }
+    .nav-top {
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1030;
+    }
+    .count {
+        display: none;
+    }
+    .count-mobile {
+        display: flex;
+        color: black;
+        background-color: red;
+        position: absolute;
+        padding: 0px 4px;
+        border-radius: 50%;
+        right: 1%;
+        top: 3%;
+    }
+    .nav-items h6 {
+        color: rgb(25, 17, 11);
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        margin: 15px 0px;
+    }
+    .custom-icon-mobile-cart {
+        display: block;
+        color: black;
+        position: relative;
+        right: 15px;
+        top: 5px;
+    }
+    .main-nav{ 
+       
+        display: block;
+        justify-content: space-between;
+        background-color: white;
+    }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
-    .nav-items{
-        display: inline;
-   
+    .logo-text {
+        position: relative;
     }
-    .main-nav{
+    .nav-items {
+        display: inline;
+    }
+    .main-nav {
         padding: 5px 10px;
         display: inline;
         position: relative;
         bottom: 20px;
     }
-    .search{
-        margin-top: 15px;
-        width: 450px;
-        margin-left: 18px;
+    .custom-icon-desktop {
+        display: none;
+    }
+    .custom-icon-mobile {
+        display: block;
+        color: black;
+    }
+    .custom-icon-mobile-cart {
+        display: block;
+        color: black;
+        position: relative;
+        right: 15px;
+        cursor: pointer;
+    }
+   
+    .count {
+        display: none;
+    }
+    .count-mobile {
+        display: flex;
+    }
+    .nav-items h6 {
+        color: rgb(25, 17, 11);
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 600;
+        margin: 15px 0px;
+    }
+    .main-nav{
+        
+        display: block;
+        justify-content: space-between;
+        background-color: white;
+        
+         
+        
+    }
+    .nav-top {
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1030;
     }
 }
