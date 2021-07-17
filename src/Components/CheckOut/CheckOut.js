@@ -1,15 +1,55 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './CheckOut.css';
 import { useForm } from "react-hook-form";
+import {CartContext} from '../../Context/Cart/CartContext'
 
 
 const CheckOut = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
 
+    const { total, cartItems, itemCount, checkout, handleCheckout } = useContext(CartContext);
+    console.log(cartItems);
     const onSubmit = data => {
+        const firstName = document.getElementById('firstName').value;
+        const lastName = document.getElementById('lastName').value;
+        const address = document.getElementById('address').value;
+        const district = document.getElementById('district').value;
+        const city = document.getElementById('cityName').value;
+        const postCode = document.getElementById('postCode').value;
+        const phoneNum = document.getElementById('phoneNumber').value;
+        const email = document.getElementById('email').value;
+        
+
+        const eventData = {
+            firstName: firstName,
+            lastName: lastName,
+            address: address,
+            district: district,
+            city:city,
+            postCode:postCode,
+            phoneNumber: phoneNum,
+            email: email,
+            products: cartItems,
+            total: total,
+            itemCount: itemCount,
+        }
+        console.log(eventData);
+        const url = `http://localhost:5000/addOrder`;
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(eventData)
+        })
+            .then(res => {
+                console.log('server side response', res)
+                handleCheckout();
+                window.location.assign(`/success`)
+               
+            });
 
     };
-
 
     return (
         <div className="checkout container-fluid font">
@@ -65,7 +105,7 @@ const CheckOut = () => {
                          </div>
                              
                                 <div>
-                                    <button type='submit' className='submitCheckOutBtn text-center text-bold'>Place Your Order</button>
+                                    <button  type='submit' className='submitCheckOutBtn text-center text-bold'>Place Your Order</button>
                                 </div>
                             </div>
                         </form>
@@ -78,39 +118,38 @@ const CheckOut = () => {
                             <div className="d-flex">
                                 <div className="col-md-8">
                                 
-                                    <h6>Product</h6>
-                                    <p>T-shirt</p>
+                                    <h4 className='text-success'>Total Products</h4>
+                                  
                                 </div>
                                 <div className="col-md-4">
-                                    <h6>Price</h6>
-                                    <p>250 tk</p>
+                                    <b className='text-danger'>{itemCount} Products</b>
                                 </div>
                             </div>
 
                             <div className="d-flex">
                                 <div className="col-md-8">
-                                    <p>Subtotal</p>
+                                    <h5 className='text-success'>Price</h5>
                                 </div>
                                 <div className="col-md-4">
-                                    <p>280 tk</p>
+                                    <b className='text-danger'>{total} Tk</b>
                                 </div>
                             </div>
-                            <div className="d-flex">
+                            {/* <div className="d-flex">
                                 <div className="col-md-8">
-                                    <h6>Shipping</h6>
+                                    <h6>Delivery</h6>
                                 </div>
                                 <div className="col-md-4">
                                     <h6>30tk</h6>
                                 </div>
-                            </div>
+                            </div> */}
                              <br/>
                              <div className="line"></div>
                             <div className="d-flex">
                                 <div className="col-md-8">
-                                    <h4>Grand Total</h4>
+                                    <h4 className='text-success'>Grand Total</h4>
                                 </div>
                                 <div className="col-md-4">
-                                    <h5>280 tk</h5>
+                                    <b className='text-danger'>{total} Tk</b>
                                 </div>
                             </div>
                         </div>

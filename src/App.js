@@ -33,6 +33,7 @@ import Cart from './Components/Cart/Cart'
 import FoodShop from './Components/Shop/FoodShop';
 import FashionShop from './Components/Shop/FashionShop';
 import GrocariesShop from './Components/Shop/GrocariesShop';
+import Sucess from './Components/Sucess';
 
 export const UserContext = createContext();
 
@@ -96,6 +97,10 @@ function App() {
           <Route path='/dashboard'>
             <SidebarTest />
             <Dashboard />
+          </Route>
+          <Route path='/success'>
+            <Nav/>
+            <Sucess/>
           </Route>
           <Route path='/login'>
             <Nav />
