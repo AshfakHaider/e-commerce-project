@@ -37,7 +37,7 @@ const FashionProduct = () => {
 
             <h4 className='text-center'>Here's all of the Fashion products</h4>
             <div className="underline mb-4 mt-2"></div>
-            <div className="allProducts d-flex justify-content-center ">
+            <div className="allProducts d-flex justify-content-center">
 
                 <div className="w-75 row">
                     {

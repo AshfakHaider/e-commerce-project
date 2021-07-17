@@ -34,6 +34,8 @@ import FoodShop from './Components/Shop/FoodShop';
 import FashionShop from './Components/Shop/FashionShop';
 import GrocariesShop from './Components/Shop/GrocariesShop';
 import Sucess from './Components/Sucess';
+import Orders from './Components/Dashboard/Orders/Orders';
+
 
 export const UserContext = createContext();
 
@@ -169,8 +171,11 @@ function App() {
             <SidebarTest />
             <AllReview />
           </Route>
+          <Route path='/orders'>
+            <Nav />
+            <Orders/>
+          </Route>
           <Route path="*">
-
             <Nav />
             <NotFound />
           </Route>

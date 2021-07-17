@@ -34,7 +34,7 @@ const CheckOut = () => {
             itemCount: itemCount,
         }
         console.log(eventData);
-        const url = `http://localhost:5000/addOrder`;
+        const url = `https://eco-shop-db.herokuapp.com/addOrder`;
         fetch(url, {
             method: 'POST',
             headers: {

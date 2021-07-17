@@ -1,0 +1,13 @@
+.success{
+    margin-top: 140px;
+}
+.success-icon{
+    width: 350px;
+    color: #6FBC40;
+    text-align: center;
+}
+.success h1{
+    font-size: 40px;
+    font-weight: 900;
+    color: #6FBC40
+}
