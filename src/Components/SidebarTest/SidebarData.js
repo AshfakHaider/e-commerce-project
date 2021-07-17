@@ -114,8 +114,8 @@ export const SidebarData = [
     ]
   },
   {
-    title: 'Support',
-    path: '/support',
+    title: 'Add Admin',
+    path: '/addAdmin',
     icon: <IoIcons.IoMdHelpCircle />
   }
 ];

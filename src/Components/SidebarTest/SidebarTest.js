@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import * as FaIcons from 'react-icons/fa';
@@ -8,6 +8,7 @@ import SubMenu from './Submenu';
 import { IconContext } from 'react-icons/lib';
 import './SidebarDash.css'
 import { useMediaQuery } from 'react-responsive'
+import { UserContext } from '../../App';
 
 const Nav = styled.div`
   display: flex;
@@ -36,7 +37,6 @@ const SidebarNav = styled.nav`
   transition: 350ms;
   z-index: 10;
   overflow-y:scroll;
-
 `;
 
 const SidebarWrap = styled.div`
@@ -44,7 +44,25 @@ const SidebarWrap = styled.div`
 `;
 
 const SidebarTest = () => {
-  const [sidebar, setSidebar] = useState(false);
+  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const [admin, setAdmin] = useState([]);
+    const [isAdmin, setIsAdmin] = useState(false);
+    useEffect(() => {
+        fetch('https://eco-shop-db.herokuapp.com/admin')
+            .then(res => res.json())
+            .then(data => setAdmin(data))
+    }, [])
+    let makeAdmin;
+    let role = 'user';
+    if (admin.length > 0) {
+        makeAdmin = admin.find(make => make.email === loggedInUser.email);
+        if (makeAdmin) {
+            role = 'admin';
+        }
+
+    }
+    console.log(role);
+  const [sidebar, setSidebar] = useState(true);
   const handleResize = () => {
     if (window.innerWidth < 720) {
       setSidebar(false)
@@ -59,13 +77,7 @@ const SidebarTest = () => {
 
   const showSidebar = () => setSidebar(!sidebar);
 
-  const isDesktopOrLaptop = useMediaQuery({
-    query: '(min-device-width: 1224px)'
-  })
-  const isTabletOrMobile = useMediaQuery({ query: ' (min-width: 481px) and (max-width: 767px) ' })
-  const isTabletOrMobileDevice = useMediaQuery({
-    query: '(min-width: 320px) and (max-width: 480px) '
-  })
+  
 
   
   //choose the screen size 
@@ -74,8 +86,11 @@ const SidebarTest = () => {
 
 
   return (
-    <>
-      <IconContext.Provider value={{ color: '#009E7F' }}>
+      <div>
+      {
+        role === 'admin' ?
+        <div>
+          <IconContext.Provider value={{ color: '#009E7F' }}>
         <Nav>
           <NavIcon to='#'>
             <FaIcons.FaBars onClick={showSidebar} />
@@ -95,8 +110,17 @@ const SidebarTest = () => {
           </SidebarNav>
         </div>
       </IconContext.Provider>
-    </>
-  );
+
+        </div> :
+        <div>
+          <h1>WelCome User</h1>
+          <Link to="/">Homepage</Link>
+        </div>
+        
+      }
+      </div> 
+      
+      );
 };
 
 export default SidebarTest;

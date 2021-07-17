@@ -9,7 +9,6 @@ import Home from './Components/Home/Home';
 import Login from './Components/Login/Login';
 import { createContext, useEffect } from 'react';
 import { useState } from 'react';
-import Navbar from './Components/Navbar/Navbar';
 import SingleProduct from './Components/Product/SingleProduct/SingleProduct.js';
 import AddFashion from './Components/Dashboard/AddProduct/AddFashionPd';
 import AddFood from './Components/Dashboard/AddProduct/AddFoodPd';
@@ -25,7 +24,6 @@ import AddReview from './Components/Dashboard/AddReview/AddReview';
 import SidebarTest from './Components/SidebarTest/SidebarTest';
 import CheckOut from './Components/CheckOut/CheckOut';
 import AllReview from './Components/Dashboard/AllReview/AllReview';
-import NavTop from './Components/Nav/NavTop';
 import Nav from './Components/Nav/Nav'
 import AddTopProduct from './Components/Dashboard/AddProduct/AddTopProduct';
 import Search from './Components/Search/Search';
@@ -35,6 +33,8 @@ import FashionShop from './Components/Shop/FashionShop';
 import GrocariesShop from './Components/Shop/GrocariesShop';
 import Sucess from './Components/Sucess';
 import Orders from './Components/Dashboard/Orders/Orders';
+import PrivateRoute from './Components/Login/PrivateRoute/PrivateRoute';
+import AddAdmin from './Components/Dashboard/AddAdmin/AddAdmin'
 
 
 export const UserContext = createContext();
@@ -96,13 +96,13 @@ function App() {
             <Search />
             <Footer />
           </Route>
-          <Route path='/dashboard'>
+          <PrivateRoute path='/dashboard'>
             <SidebarTest />
             <Dashboard />
-          </Route>
+          </PrivateRoute>
           <Route path='/success'>
-            <Nav/>
-            <Sucess/>
+            <Nav />
+            <Sucess />
           </Route>
           <Route path='/login'>
             <Nav />
@@ -114,10 +114,10 @@ function App() {
             <SingleProduct />
             <Footer />
           </Route>
-          <Route path='/checkOut'>
+          <PrivateRoute path='/checkOut'>
             <Nav />
             <CheckOut />
-          </Route>
+          </PrivateRoute>
           <Route exact path='/'>
             <Nav />
             <Home></Home>
@@ -158,7 +158,6 @@ function App() {
             <Footer />
           </Route>
           <Route path='/allProducts/food'>
-
             <Nav />
             <Food />
             <Footer />
@@ -173,7 +172,10 @@ function App() {
           </Route>
           <Route path='/orders'>
             <Nav />
-            <Orders/>
+            <Orders />
+          </Route>
+          <Route path="/addAdmin">
+            <AddAdmin />
           </Route>
           <Route path="*">
             <Nav />
