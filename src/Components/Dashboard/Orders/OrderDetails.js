@@ -5,7 +5,7 @@ const OrderDetails = ({ order }) => {
     const {_id, firstName, lastName, address, district, city, phoneNumber, email, products,total } = order;
     const deleteProduct = id => {
   
-        fetch(`http://localhost:5000/deleteOrder/${id}`, {
+        fetch(`https://eco-shop-db.herokuapp.com/deleteOrder/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
