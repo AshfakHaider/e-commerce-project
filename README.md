@@ -25,3 +25,12 @@
  ##### 5. They can add product into Cart and also remove from Cart
  ##### 6. Before they are proceed to checkout page they will redirected to the login page
  ##### 1. After Login Using Google Or Id Password they will redirected to the Checkout Page
+ 
+ 
+ 
+ # User Features
+![image](https://user-images.githubusercontent.com/76880267/133083540-93a21c85-db36-4d9a-8ab3-ff7209de3f38.png)
+![image](https://user-images.githubusercontent.com/76880267/133083652-20de6db7-6a13-4ab1-9f20-2c9320b0520f.png)
+![image](https://user-images.githubusercontent.com/76880267/133083710-216a9db1-29e0-446b-bf55-1d9ed102c8b0.png)
+![image](https://user-images.githubusercontent.com/76880267/133083803-5e56d686-2759-4d0b-94cd-9cc0ee7947cc.png)
+
